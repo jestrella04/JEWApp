@@ -12,9 +12,12 @@ namespace JEWApp
 {
     public partial class Main : Form
     {
-        public Main()
+        private Login loginForm;
+
+        public Main(Login login)
         {
             InitializeComponent();
+            loginForm = login;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -28,6 +31,11 @@ namespace JEWApp
                 Login loginForm = new Login();
                 loginForm.Show();
             }
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            loginForm.Close();
         }
     }
 }

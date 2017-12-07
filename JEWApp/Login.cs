@@ -20,7 +20,6 @@ namespace JEWApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            this.UseWaitCursor = true;
             Cursor.Current = Cursors.WaitCursor;
 
             string loginEmail = txtLoginEmail.Text;
@@ -45,15 +44,16 @@ namespace JEWApp
                 else
                 {
                     Database db = new Database();
-                    string empleadoId = db.consultaStringScalar("SELECT [id] FROM [dbo].[empleado] WHERE [correo] = " + loginEmail);
+                    string empleadoId = db.consultaStringScalar("SELECT [id] FROM [dbo].[empleado] WHERE [correo] = '" + loginEmail + "'");
 
                     if (int.TryParse(empleadoId, out int id))
                     {
+                        Session.sesionIniciada = true;
                         Session.empleadoId = id;
                         Session.empleadoEmail = loginEmail;
 
-                        this.Close();
-                        Main mainForm = new Main();
+                        this.Visible = false;
+                        Main mainForm = new Main(this);
                         mainForm.Show();
                     }
 
