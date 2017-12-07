@@ -12,9 +12,9 @@ namespace JEWApp
     {
         Database db = new Database();
 
-        void DeleteFacturaDetalle(int facturaId, int productoId)
+        public void DeleteFacturaDetalle(int facturaId, int productoId)
         {
-            String storedProcedureName = "sp_delete_factura_detalle";
+            string storedProcedureName = "sp_delete_factura_detalle";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.DeleteCommand.CommandType = CommandType.StoredProcedure;
 
@@ -24,9 +24,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        void InsertCliente(int tipoId, int tipoDocId, string docId, string nombreCliente, string apellidoCliente, string direccionCliente, string telefonoCliente, string correoCliente, int fechaNacDia, int fechaNacMes, int fechaNacAno)
+        public void InsertCliente(int tipoId, int tipoDocId, string docId, string nombreCliente, string apellidoCliente, string direccionCliente, string telefonoCliente, string correoCliente, int fechaNacDia, int fechaNacMes, int fechaNacAno)
         {
-            String storedProcedureName = "sp_insert_cliente";
+            string storedProcedureName = "sp_insert_cliente";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
 
@@ -45,9 +45,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        void InsertEmpleado( int roldId, int tipoDocId, string docId, string nombreEmpleado, string apellidoEmpleado, string telefonoEmpleado, string correoEmpleado, string passwordEmpleado)
+        public void InsertEmpleado( int roldId, int tipoDocId, string docId, string nombreEmpleado, string apellidoEmpleado, string telefonoEmpleado, string correoEmpleado, string passwordEmpleado)
         {
-            String storedProcedureName = "sp_insert_empleado";
+            string storedProcedureName = "sp_insert_empleado";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
 
@@ -63,9 +63,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        void InsertFactura(int clienteId, int estadoId, string descrFactura)
+        public void InsertFactura(int clienteId, int estadoId, string descrFactura)
         {
-            String storedProcedureName = "sp_insert_factura";
+            string storedProcedureName = "sp_insert_factura";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
 
@@ -76,9 +76,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        void InsertFacturaDetalle(int facturaId, int productoId, int vehiculoId, int empleadoId, double cantidad, double precio)
+        public void InsertFacturaDetalle(int facturaId, int productoId, int vehiculoId, int empleadoId, double cantidad, double precio)
         {
-            String storedProcedureName = "sp_insert_factura_detalle";
+            string storedProcedureName = "sp_insert_factura_detalle";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
 
@@ -92,9 +92,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        void InsertProductoInventario(int productoId, double cantidadDisponible, double cantidadMinima, double precio)
+        public void InsertProductoInventario(int productoId, double cantidadDisponible, double cantidadMinima, double precio)
         {
-            String storedProcedureName = "sp_insert_producto_inventario";
+            string storedProcedureName = "sp_insert_producto_inventario";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
 
@@ -106,9 +106,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        void InsertVehiculo(int clienteId, int marcaId, int modeloId, int anoVehiculo, string matriculaVehiculo, string descrVehiculo)
+        public void InsertVehiculo(int clienteId, int marcaId, int modeloId, int anoVehiculo, string matriculaVehiculo, string descrVehiculo)
         {
-            String storedProcedureName = "sp_insert_vehiculo";
+            string storedProcedureName = "sp_insert_vehiculo";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
 
@@ -122,9 +122,9 @@ namespace JEWApp
             db.desconectar();
         }
 
-        DataTable SelectCliente(int clienteId = 0)
+        public DataTable SelectCliente(int clienteId = 0)
         {
-            String storedProcedureName = "sp_select_cliente";
+            string storedProcedureName = "sp_select_cliente";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -141,9 +141,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectClienteTipo(int clienteTipoId = 0)
+        public DataTable SelectClienteTipo(int clienteTipoId = 0)
         {
-            String storedProcedureName = "sp_select_cliente_tipo";
+            string storedProcedureName = "sp_select_cliente_tipo";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -160,9 +160,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectEmpleado(int empleadoId = 0)
+        public DataTable SelectEmpleado(int empleadoId = 0)
         {
-            String storedProcedureName = "sp_select_empleado";
+            string storedProcedureName = "sp_select_empleado";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -179,9 +179,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectFactura(int facturaId = 0)
+        public DataTable SelectFactura(int facturaId = 0)
         {
-            String storedProcedureName = "sp_select_factura";
+            string storedProcedureName = "sp_select_factura";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -198,9 +198,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectFacturaDetalle(int facturaId)
+        public DataTable SelectFacturaDetalle(int facturaId)
         {
-            String storedProcedureName = "sp_select_factura_detalle";
+            string storedProcedureName = "sp_select_factura_detalle";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -214,9 +214,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectFacturaEstado(int estadoId = 0)
+        public DataTable SelectFacturaEstado(int estadoId = 0)
         {
-            String storedProcedureName = "sp_select_factura_estado";
+            string storedProcedureName = "sp_select_factura_estado";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -233,9 +233,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectInventario()
+        public DataTable SelectInventario()
         {
-            String storedProcedureName = "sp_select_inventario";
+            string storedProcedureName = "sp_select_inventario";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -247,9 +247,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectPermiso(int usuarioId)
+        public DataTable SelectPermiso(int usuarioId)
         {
-            String storedProcedureName = "sp_select_permiso";
+            string storedProcedureName = "sp_select_permiso";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -263,9 +263,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectProducto(int productoId = 0)
+        public DataTable SelectProducto(int productoId = 0)
         {
-            String storedProcedureName = "sp_select_producto";
+            string storedProcedureName = "sp_select_producto";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -282,9 +282,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectProductoCategoria(int categoriaId = 0)
+        public DataTable SelectProductoCategoria(int categoriaId = 0)
         {
-            String storedProcedureName = "sp_select_producto_categoria";
+            string storedProcedureName = "sp_select_producto_categoria";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -301,9 +301,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectProductoMedida(int medidaId = 0)
+        public DataTable SelectProductoMedida(int medidaId = 0)
         {
-            String storedProcedureName = "sp_select_producto_medida";
+            string storedProcedureName = "sp_select_producto_medida";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -320,9 +320,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectRol(int rolId = 0)
+        public DataTable SelectRol(int rolId = 0)
         {
-            String storedProcedureName = "sp_select_rol";
+            string storedProcedureName = "sp_select_rol";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -339,9 +339,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectTarea(int tareaId = 0)
+        public DataTable SelectTarea(int tareaId = 0)
         {
-            String storedProcedureName = "sp_select_tarea";
+            string storedProcedureName = "sp_select_tarea";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -358,9 +358,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectTipoDocId(int tipoDocId = 0)
+        public DataTable SelectTipoDocId(int tipoDocId = 0)
         {
-            String storedProcedureName = "sp_select_tipo_docid";
+            string storedProcedureName = "sp_select_tipo_docid";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -377,9 +377,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectVehiculo(int vehiculoId = 0)
+        public DataTable SelectVehiculo(int vehiculoId = 0)
         {
-            String storedProcedureName = "sp_select_vehiculo";
+            string storedProcedureName = "sp_select_vehiculo";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -396,9 +396,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectVehiculoMarca(int marcaId = 0)
+        public DataTable SelectVehiculoMarca(int marcaId = 0)
         {
-            String storedProcedureName = "sp_select_vehiculo_marca";
+            string storedProcedureName = "sp_select_vehiculo_marca";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -415,9 +415,9 @@ namespace JEWApp
             return dt;
         }
 
-        DataTable SelectVehiculoModelo(int modeloId = 0)
+        public DataTable SelectVehiculoModelo(int modeloId = 0)
         {
-            String storedProcedureName = "sp_select_vehiculo_modelo";
+            string storedProcedureName = "sp_select_vehiculo_modelo";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -425,6 +425,23 @@ namespace JEWApp
             {
                 da.SelectCommand.Parameters.Add("@ClienteId", SqlDbType.Int).Value = modeloId;
             }
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            db.desconectar();
+
+            return dt;
+        }
+
+        public DataTable VerifyEmpleadoLogin(string email, string password)
+        {
+            string storedProcedureName = "sp_verify_empleado_login";
+            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.conectar());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            da.SelectCommand.Parameters.Add("@LoginEmail", SqlDbType.Int).Value = email;
+            da.SelectCommand.Parameters.Add("@LoginPassword", SqlDbType.Int).Value = password;
 
             DataTable dt = new DataTable();
             da.Fill(dt);
