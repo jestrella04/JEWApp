@@ -26,7 +26,15 @@ namespace JEWApp
             {
                 StoredProcedure storedProcedure = new StoredProcedure();
 
-                storedProcedure.VerifyEmpleadoLogin(loginEmail, loginPassword);
+                string test = storedProcedure.VerifyEmpleadoLogin(loginEmail, loginPassword);
+
+                // DataTableReader reader = new DataTableReader(test);
+
+                //if (reader.HasRows)
+                //{
+                //MessageBox.Show(reader.GetString(0));
+                MessageBox.Show(test);
+                //}
             }
 
             else

@@ -8,14 +8,24 @@ using System.Data.SqlClient;
 
 namespace JEWApp
 {
-    class Database
+    public class Database
     {
+        private string connectionString = @"Data Source=DESKTOP-52K7R3D\SQLEXPRESS;Initial Catalog=jewdb;Integrated Security=True";
         private SqlConnection db;
 
-        public SqlConnection conectar()
+        public Database()
         {
-            db = new SqlConnection(@"Data Source=DESKTOP-S412P7J\SQLEXPRESS;Initial Catalog=jewdb;Integrated Security=True");
+            db = new SqlConnection(connectionString);
+        }
+
+        public SqlConnection getDbConnection()
+        {
             return db;
+        }
+
+        public void conectar()
+        {
+            db.Open();
         }
 
         public void desconectar()
