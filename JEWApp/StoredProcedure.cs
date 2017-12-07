@@ -12,114 +12,154 @@ namespace JEWApp
     {
         Database db = new Database();
 
-        public void DeleteFacturaDetalle(int facturaId, int productoId)
+        public int DeleteFacturaDetalle(int facturaId, int productoId)
         {
             string storedProcedureName = "sp_delete_factura_detalle";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.DeleteCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.DeleteCommand.Parameters.Add("@FacturaId", SqlDbType.Int).Value = facturaId;
-            da.DeleteCommand.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
+            cmd.Parameters.Add("@FacturaId", SqlDbType.Int).Value = facturaId;
+            cmd.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
 
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
-        public void InsertCliente(int tipoId, int tipoDocId, string docId, string nombreCliente, string apellidoCliente, string direccionCliente, string telefonoCliente, string correoCliente, int fechaNacDia, int fechaNacMes, int fechaNacAno)
+        public int InsertCliente(int tipoId, int tipoDocId, string docId, string nombreCliente, string apellidoCliente, string direccionCliente, string telefonoCliente, string correoCliente, int fechaNacDia, int fechaNacMes, int fechaNacAno)
         {
             string storedProcedureName = "sp_insert_cliente";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.InsertCommand.Parameters.Add("@TipoId", SqlDbType.Int).Value = tipoId;
-            da.InsertCommand.Parameters.Add("@TipoDocId", SqlDbType.Int).Value = tipoDocId;
-            da.InsertCommand.Parameters.Add("@DocId", SqlDbType.NVarChar).Value = docId;
-            da.InsertCommand.Parameters.Add("@NombreCliente", SqlDbType.NVarChar).Value = nombreCliente;
-            da.InsertCommand.Parameters.Add("@ApellidoCliente", SqlDbType.NVarChar).Value = apellidoCliente;
-            da.InsertCommand.Parameters.Add("@DireccionCliente", SqlDbType.NVarChar).Value = direccionCliente;
-            da.InsertCommand.Parameters.Add("@TelefonoCliente", SqlDbType.NChar).Value = telefonoCliente;
-            da.InsertCommand.Parameters.Add("@CorreoCliente", SqlDbType.NVarChar).Value = correoCliente;
-            da.InsertCommand.Parameters.Add("@FechaNacDia", SqlDbType.TinyInt).Value = fechaNacDia;
-            da.InsertCommand.Parameters.Add("@FechaNacMes", SqlDbType.TinyInt).Value = fechaNacMes;
-            da.InsertCommand.Parameters.Add("@FechaNacAno", SqlDbType.Int).Value = fechaNacAno;
+            cmd.Parameters.Add("@TipoId", SqlDbType.Int).Value = tipoId;
+            cmd.Parameters.Add("@TipoDocId", SqlDbType.Int).Value = tipoDocId;
+            cmd.Parameters.Add("@DocId", SqlDbType.NVarChar, 50).Value = docId;
+            cmd.Parameters.Add("@NombreCliente", SqlDbType.NVarChar, 50).Value = nombreCliente;
+            cmd.Parameters.Add("@ApellidoCliente", SqlDbType.NVarChar, 50).Value = apellidoCliente;
+            cmd.Parameters.Add("@DireccionCliente", SqlDbType.NVarChar, 50).Value = direccionCliente;
+            cmd.Parameters.Add("@TelefonoCliente", SqlDbType.NChar, 10).Value = telefonoCliente;
+            cmd.Parameters.Add("@CorreoCliente", SqlDbType.NVarChar, 50).Value = correoCliente;
+            cmd.Parameters.Add("@FechaNacDia", SqlDbType.TinyInt).Value = fechaNacDia;
+            cmd.Parameters.Add("@FechaNacMes", SqlDbType.TinyInt).Value = fechaNacMes;
+            cmd.Parameters.Add("@FechaNacAno", SqlDbType.Int).Value = fechaNacAno;
 
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
-        public void InsertEmpleado( int roldId, int tipoDocId, string docId, string nombreEmpleado, string apellidoEmpleado, string telefonoEmpleado, string correoEmpleado, string passwordEmpleado)
+        public int InsertEmpleado( int roldId, int tipoDocId, string docId, string nombreEmpleado, string apellidoEmpleado, string telefonoEmpleado, string correoEmpleado, string passwordEmpleado)
         {
             string storedProcedureName = "sp_insert_empleado";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.InsertCommand.Parameters.Add("@RolId", SqlDbType.Int).Value = roldId;
-            da.InsertCommand.Parameters.Add("@TipoDocId", SqlDbType.Int).Value = tipoDocId;
-            da.InsertCommand.Parameters.Add("@DocId", SqlDbType.NVarChar).Value = docId;
-            da.InsertCommand.Parameters.Add("@NombreEmpleado", SqlDbType.NVarChar).Value = nombreEmpleado;
-            da.InsertCommand.Parameters.Add("@ApellidoEmpleado", SqlDbType.NVarChar).Value = apellidoEmpleado;
-            da.InsertCommand.Parameters.Add("@TelefonoEmpleado", SqlDbType.NChar).Value = telefonoEmpleado;
-            da.InsertCommand.Parameters.Add("@CorreoEmpleado", SqlDbType.NVarChar).Value = correoEmpleado;
-            da.InsertCommand.Parameters.Add("@PasswordEmpleado", SqlDbType.NVarChar).Value = passwordEmpleado;
+            cmd.Parameters.Add("@RolId", SqlDbType.Int).Value = roldId;
+            cmd.Parameters.Add("@TipoDocId", SqlDbType.Int).Value = tipoDocId;
+            cmd.Parameters.Add("@DocId", SqlDbType.NVarChar, 50).Value = docId;
+            cmd.Parameters.Add("@NombreEmpleado", SqlDbType.NVarChar, 50).Value = nombreEmpleado;
+            cmd.Parameters.Add("@ApellidoEmpleado", SqlDbType.NVarChar, 50).Value = apellidoEmpleado;
+            cmd.Parameters.Add("@TelefonoEmpleado", SqlDbType.NChar, 10).Value = telefonoEmpleado;
+            cmd.Parameters.Add("@CorreoEmpleado", SqlDbType.NVarChar, 50).Value = correoEmpleado;
+            cmd.Parameters.Add("@PasswordEmpleado", SqlDbType.NVarChar, 255).Value = passwordEmpleado;
 
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
-        public void InsertFactura(int clienteId, int estadoId, string descrFactura)
+        public int InsertFactura(int clienteId, int estadoId, string descrFactura)
         {
             string storedProcedureName = "sp_insert_factura";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.InsertCommand.Parameters.Add("@ClienteId", SqlDbType.Int).Value = clienteId;
-            da.InsertCommand.Parameters.Add("@EstadoId", SqlDbType.Int).Value = estadoId;
-            da.InsertCommand.Parameters.Add("@DescrFactura", SqlDbType.NVarChar).Value = descrFactura;
+            cmd.Parameters.Add("@ClienteId", SqlDbType.Int).Value = clienteId;
+            cmd.Parameters.Add("@EstadoId", SqlDbType.Int).Value = estadoId;
+            cmd.Parameters.Add("@DescrFactura", SqlDbType.NVarChar, 255).Value = descrFactura;
 
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
-        public void InsertFacturaDetalle(int facturaId, int productoId, int vehiculoId, int empleadoId, double cantidad, double precio)
+        public int InsertFacturaDetalle(int facturaId, int productoId, int vehiculoId, int empleadoId, double cantidad, double precio)
         {
             string storedProcedureName = "sp_insert_factura_detalle";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.InsertCommand.Parameters.Add("@FacturaId", SqlDbType.Int).Value = facturaId;
-            da.InsertCommand.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
-            da.InsertCommand.Parameters.Add("@VehiculoId", SqlDbType.Int).Value = vehiculoId;
-            da.InsertCommand.Parameters.Add("@EmpleadoId", SqlDbType.Int).Value = empleadoId;
-            da.InsertCommand.Parameters.Add("@Cantidad", SqlDbType.Decimal).Value = cantidad;
-            da.InsertCommand.Parameters.Add("@Precio", SqlDbType.Decimal).Value = precio;
+            cmd.Parameters.Add("@FacturaId", SqlDbType.Int).Value = facturaId;
+            cmd.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
+            cmd.Parameters.Add("@VehiculoId", SqlDbType.Int).Value = vehiculoId;
+            cmd.Parameters.Add("@EmpleadoId", SqlDbType.Int).Value = empleadoId;
+            cmd.Parameters.Add("@Cantidad", SqlDbType.Decimal).Value = cantidad;
+            cmd.Parameters.Add("@Precio", SqlDbType.Decimal).Value = precio;
 
+            cmd.Parameters["@Cantidad"].Precision = 11;
+            cmd.Parameters["@Cantidad"].Scale = 2;
+            cmd.Parameters["@Precio"].Precision = 11;
+            cmd.Parameters["@Precio"].Scale = 2;
+
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
-        public void InsertProductoInventario(int productoId, double cantidadDisponible, double cantidadMinima, double precio)
+        public int InsertProductoInventario(int productoId, double cantidadDisponible, double cantidadMinima, double precio)
         {
             string storedProcedureName = "sp_insert_producto_inventario";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.InsertCommand.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
-            da.InsertCommand.Parameters.Add("@CantidadDisponible", SqlDbType.Decimal).Value = cantidadDisponible;
-            da.InsertCommand.Parameters.Add("@CantidadMinima", SqlDbType.Decimal).Value = cantidadMinima;
-            da.InsertCommand.Parameters.Add("@Precio", SqlDbType.Decimal).Value = precio;
+            cmd.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
+            cmd.Parameters.Add("@CantidadDisponible", SqlDbType.Decimal).Value = cantidadDisponible;
+            cmd.Parameters.Add("@CantidadMinima", SqlDbType.Decimal).Value = cantidadMinima;
+            cmd.Parameters.Add("@Precio", SqlDbType.Decimal).Value = precio;
 
+            cmd.Parameters["@CantidadDisponible"].Precision = 11;
+            cmd.Parameters["@CantidadDisponible"].Scale = 2;
+            cmd.Parameters["@CantidadMinima"].Precision = 11;
+            cmd.Parameters["@CantidadMinima"].Scale = 2;
+            cmd.Parameters["@Precio"].Precision = 11;
+            cmd.Parameters["@Precio"].Scale = 2;
+
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
-        public void InsertVehiculo(int clienteId, int marcaId, int modeloId, int anoVehiculo, string matriculaVehiculo, string descrVehiculo)
+        public int InsertVehiculo(int clienteId, int marcaId, int modeloId, int anoVehiculo, string matriculaVehiculo, string descrVehiculo)
         {
             string storedProcedureName = "sp_insert_vehiculo";
-            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
-            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            da.InsertCommand.Parameters.Add("@ClienteId", SqlDbType.Int).Value = clienteId;
-            da.InsertCommand.Parameters.Add("@MarcaId", SqlDbType.Int).Value = marcaId;
-            da.InsertCommand.Parameters.Add("@ModeloId", SqlDbType.Int).Value = modeloId;
-            da.InsertCommand.Parameters.Add("@Anovehiculo", SqlDbType.Int).Value = anoVehiculo;
-            da.InsertCommand.Parameters.Add("@MatriculaVehiculo", SqlDbType.NVarChar).Value = matriculaVehiculo;
-            da.InsertCommand.Parameters.Add("@DescrVehiculo", SqlDbType.NVarChar).Value = descrVehiculo;
+            cmd.Parameters.Add("@ClienteId", SqlDbType.Int).Value = clienteId;
+            cmd.Parameters.Add("@MarcaId", SqlDbType.Int).Value = marcaId;
+            cmd.Parameters.Add("@ModeloId", SqlDbType.Int).Value = modeloId;
+            cmd.Parameters.Add("@Anovehiculo", SqlDbType.Int).Value = anoVehiculo;
+            cmd.Parameters.Add("@MatriculaVehiculo", SqlDbType.NVarChar, 50).Value = matriculaVehiculo;
+            cmd.Parameters.Add("@DescrVehiculo", SqlDbType.NVarChar, 255).Value = descrVehiculo;
 
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
             db.desconectar();
+
+            return affectedRows;
         }
 
         public DataTable SelectCliente(int clienteId = 0)
@@ -128,15 +168,13 @@ namespace JEWApp
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-            if ( 0 != clienteId)
+            if (0 != clienteId)
             {
                 da.SelectCommand.Parameters.Add("@ClienteId", SqlDbType.Int).Value = clienteId;
             }
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -155,8 +193,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -173,8 +209,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -193,8 +227,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -208,8 +240,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -228,8 +258,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -241,8 +269,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -257,8 +283,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -277,8 +301,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -295,8 +317,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -315,8 +335,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -333,8 +351,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -353,8 +369,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -371,8 +385,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
@@ -391,8 +403,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -410,8 +420,6 @@ namespace JEWApp
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            db.desconectar();
-
             return dt;
         }
 
@@ -428,8 +436,6 @@ namespace JEWApp
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-            db.desconectar();
 
             return dt;
         }
