@@ -20,6 +20,7 @@ namespace JEWApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
+            this.UseWaitCursor = true;
             Cursor.Current = Cursors.WaitCursor;
 
             string loginEmail = txtLoginEmail.Text;
