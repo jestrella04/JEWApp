@@ -19,28 +19,66 @@ namespace JEWApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            Cursor.Current = Cursors.WaitCursor;
+
             string loginEmail = txtLoginEmail.Text;
             string loginPassword = txtLoginPassword.Text;
+
+            lblLoginError.Text = "";
+            lblLoginError.Visible = false;
 
             if (! String.IsNullOrWhiteSpace(loginEmail) && ! String.IsNullOrWhiteSpace(loginPassword))
             {
                 StoredProcedure storedProcedure = new StoredProcedure();
 
-                string test = storedProcedure.VerifyEmpleadoLogin(loginEmail, loginPassword);
+                string loginResult = storedProcedure.VerifyEmpleadoLogin(loginEmail, loginPassword);
 
-                // DataTableReader reader = new DataTableReader(test);
+                if ("Credenciales válidas." != loginResult)
+                {
+                    lblLoginError.Text = loginResult;
+                    lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
+                    lblLoginError.Visible = true;
+                }
 
-                //if (reader.HasRows)
-                //{
-                //MessageBox.Show(reader.GetString(0));
-                MessageBox.Show(test);
-                //}
+                else
+                {
+                    Database db = new Database();
+                    string empleadoId = db.consultaStringScalar("SELECT [id] FROM [dbo].[empleado] WHERE [correo] = " + loginEmail);
+
+                    if (int.TryParse(empleadoId, out int id))
+                    {
+                        Session.empleadoId = id;
+                        Session.empleadoEmail = loginEmail;
+
+                        this.Close();
+                        Main mainForm = new Main();
+                        mainForm.Show();
+                    }
+
+                    else
+                    {
+                        lblLoginError.Text = "Error desconocido, por favor intente de nuevo.";
+                        lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
+                        lblLoginError.Visible = true;
+                    }
+                }
             }
 
             else
             {
-                MessageBox.Show("Por favor introduzca su email y contraseña");
+                lblLoginError.Text = "Por favor introduzca su email y contraseña.";
+                lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
+                lblLoginError.Visible = true;
             }
+
+            this.Enabled = true;
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            lblLoginError.Visible = false;
         }
     }
 }

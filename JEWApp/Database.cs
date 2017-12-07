@@ -33,13 +33,24 @@ namespace JEWApp
             db.Close();
         }
 
-        public DataTable consultaStringDT(String sql)
+        public DataTable consultaStringDT(string sql)
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, db);
 
             da.Fill(dt);
             return dt;
+        }
+
+        public string consultaStringScalar(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, db);
+
+            conectar();
+            string result = Convert.ToString(cmd.ExecuteScalar());
+            desconectar();
+
+            return result;
         }
     }
 }
