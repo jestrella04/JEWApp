@@ -120,13 +120,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtLoginEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtLoginPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblLoginError;
+        public System.Windows.Forms.TextBox txtLoginEmail;
+        public System.Windows.Forms.TextBox txtLoginPassword;
     }
 }
 

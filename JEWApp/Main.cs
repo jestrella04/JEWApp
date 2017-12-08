@@ -27,13 +27,27 @@ namespace JEWApp
             if (! sesionIniciada)
             {
                 this.Close();
+                loginForm.txtLoginEmail.Text = "";
+                loginForm.txtLoginPassword.Text = "";
                 loginForm.Show();
             }
         }
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            loginForm.Close();
+            if (Session.sesionIniciada)
+            {
+                loginForm.Close();
+            }
+        }
+
+        private void btnSesionCerrar_Click(object sender, EventArgs e)
+        {
+            Session.sesionIniciada = false;
+            this.Close();
+            loginForm.txtLoginEmail.Text = "";
+            loginForm.txtLoginPassword.Text = "";
+            loginForm.Show();
         }
     }
 }

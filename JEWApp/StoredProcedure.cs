@@ -84,12 +84,14 @@ namespace JEWApp
             cmd.Parameters.Add("@ClienteId", SqlDbType.Int).Value = clienteId;
             cmd.Parameters.Add("@EstadoId", SqlDbType.Int).Value = estadoId;
             cmd.Parameters.Add("@DescrFactura", SqlDbType.NVarChar, 255).Value = descrFactura;
+            cmd.Parameters.Add("@InsertedFacturaId", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
+            int insertedId = Convert.ToInt32(cmd.Parameters["@InsertedFacturaId"].Value);
             db.desconectar();
 
-            return affectedRows;
+            return insertedId;
         }
 
         public int InsertFacturaDetalle(int facturaId, int productoId, int vehiculoId, int empleadoId, double cantidad, double precio)

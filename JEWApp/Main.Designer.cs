@@ -46,9 +46,9 @@
             this.btnFacturaCrear = new System.Windows.Forms.ToolStripButton();
             this.btnFacturaLista = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSesionCerrar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSesionCerrar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -253,25 +253,6 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 52);
             // 
-            // btnSesionCerrar
-            // 
-            this.btnSesionCerrar.AutoSize = false;
-            this.btnSesionCerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSesionCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnSesionCerrar.Image")));
-            this.btnSesionCerrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnSesionCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSesionCerrar.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.btnSesionCerrar.Name = "btnSesionCerrar";
-            this.btnSesionCerrar.Size = new System.Drawing.Size(52, 52);
-            this.btnSesionCerrar.Text = "toolStripButton1";
-            this.btnSesionCerrar.ToolTipText = "Cerrar Sesión";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 52);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.AutoSize = false;
@@ -284,6 +265,26 @@
             this.toolStripButton1.Size = new System.Drawing.Size(52, 52);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.ToolTipText = "Reporte de Comisiones";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 52);
+            // 
+            // btnSesionCerrar
+            // 
+            this.btnSesionCerrar.AutoSize = false;
+            this.btnSesionCerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSesionCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnSesionCerrar.Image")));
+            this.btnSesionCerrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnSesionCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSesionCerrar.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.btnSesionCerrar.Name = "btnSesionCerrar";
+            this.btnSesionCerrar.Size = new System.Drawing.Size(52, 52);
+            this.btnSesionCerrar.Text = "toolStripButton1";
+            this.btnSesionCerrar.ToolTipText = "Cerrar Sesión";
+            this.btnSesionCerrar.Click += new System.EventHandler(this.btnSesionCerrar_Click);
             // 
             // Main
             // 
