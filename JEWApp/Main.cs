@@ -27,8 +27,6 @@ namespace JEWApp
             if (! sesionIniciada)
             {
                 this.Close();
-
-                Login loginForm = new Login();
                 loginForm.Show();
             }
         }
