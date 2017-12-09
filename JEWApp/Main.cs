@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace JEWApp
 {
     public partial class Main : Form
     {
         private Login loginForm;
+        private StoredProcedure sp;
 
         public Main(Login login)
         {
+            sp = new StoredProcedure();
             InitializeComponent();
             loginForm = login;
         }
@@ -30,6 +34,12 @@ namespace JEWApp
                 loginForm.txtLoginEmail.Text = "";
                 loginForm.txtLoginPassword.Text = "";
                 loginForm.Show();
+            }
+
+            else
+            {
+                DataTable userInfo = sp.SelectEmpleado(Session.empleadoId);
+                lblStatusBarLoginMessage.Text = "Bienvenido a JEWApp " + userInfo.Rows[0]["nombre_completo"] + ".";
             }
         }
 
