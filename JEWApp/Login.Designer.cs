@@ -39,18 +39,21 @@
             // txtLoginEmail
             // 
             this.txtLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginEmail.Location = new System.Drawing.Point(152, 96);
+            this.txtLoginEmail.Location = new System.Drawing.Point(279, 177);
+            this.txtLoginEmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtLoginEmail.Name = "txtLoginEmail";
-            this.txtLoginEmail.Size = new System.Drawing.Size(257, 26);
+            this.txtLoginEmail.Size = new System.Drawing.Size(468, 39);
             this.txtLoginEmail.TabIndex = 0;
+            this.txtLoginEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginEmail_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 62);
+            this.label1.Location = new System.Drawing.Point(279, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 20);
+            this.label1.Size = new System.Drawing.Size(274, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Correo electrónico:";
             // 
@@ -58,20 +61,23 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 156);
+            this.label2.Location = new System.Drawing.Point(281, 288);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(181, 32);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contraseña:";
             // 
             // txtLoginPassword
             // 
             this.txtLoginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginPassword.Location = new System.Drawing.Point(153, 190);
+            this.txtLoginPassword.Location = new System.Drawing.Point(281, 351);
+            this.txtLoginPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtLoginPassword.Name = "txtLoginPassword";
             this.txtLoginPassword.PasswordChar = '*';
-            this.txtLoginPassword.Size = new System.Drawing.Size(257, 26);
+            this.txtLoginPassword.Size = new System.Drawing.Size(468, 39);
             this.txtLoginPassword.TabIndex = 2;
+            this.txtLoginPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginPassword_KeyDown);
             // 
             // btnLogin
             // 
@@ -81,9 +87,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnLogin.Location = new System.Drawing.Point(200, 291);
+            this.btnLogin.Location = new System.Drawing.Point(367, 537);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(175, 56);
+            this.btnLogin.Size = new System.Drawing.Size(321, 103);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Iniciar Sesión";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -94,17 +101,18 @@
             this.lblLoginError.AutoSize = true;
             this.lblLoginError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginError.ForeColor = System.Drawing.Color.Red;
-            this.lblLoginError.Location = new System.Drawing.Point(262, 246);
+            this.lblLoginError.Location = new System.Drawing.Point(480, 454);
+            this.lblLoginError.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblLoginError.Name = "lblLoginError";
-            this.lblLoginError.Size = new System.Drawing.Size(51, 16);
+            this.lblLoginError.Size = new System.Drawing.Size(85, 29);
             this.lblLoginError.TabIndex = 5;
             this.lblLoginError.Text = "label3";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 408);
+            this.ClientSize = new System.Drawing.Size(1010, 753);
             this.Controls.Add(this.lblLoginError);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
@@ -112,11 +120,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtLoginEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JEWApp - Iniciar Sesión";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

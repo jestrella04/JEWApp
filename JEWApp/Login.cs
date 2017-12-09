@@ -30,9 +30,9 @@ namespace JEWApp
 
             if (! String.IsNullOrWhiteSpace(loginEmail) && ! String.IsNullOrWhiteSpace(loginPassword))
             {
-                StoredProcedure storedProcedure = new StoredProcedure();
+                StoredProcedure sp = new StoredProcedure();
 
-                string loginResult = storedProcedure.VerifyEmpleadoLogin(loginEmail, loginPassword);
+                string loginResult = sp.VerifyEmpleadoLogin(loginEmail, loginPassword);
 
                 if ("Credenciales válidas." != loginResult)
                 {
@@ -51,6 +51,7 @@ namespace JEWApp
                         Session.sesionIniciada = true;
                         Session.empleadoId = id;
                         Session.empleadoEmail = loginEmail;
+                        Session.empleadoPermisos = sp.SelectPermiso(id);
 
                         this.Visible = false;
                         Main mainForm = new Main(this);
@@ -80,6 +81,30 @@ namespace JEWApp
         private void Login_Load(object sender, EventArgs e)
         {
             lblLoginError.Visible = false;
+        }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void txtLoginEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void txtLoginPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }
