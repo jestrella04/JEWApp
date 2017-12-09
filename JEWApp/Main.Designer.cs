@@ -32,22 +32,22 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnUsuarioCrear = new System.Windows.Forms.ToolStripButton();
             this.btnUsuarioLista = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRolCrear = new System.Windows.Forms.ToolStripButton();
             this.btnRolLista = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClienteCrear = new System.Windows.Forms.ToolStripButton();
             this.btnClienteLista = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnProductoCrear = new System.Windows.Forms.ToolStripButton();
             this.btnProductoLista = new System.Windows.Forms.ToolStripButton();
             this.btnProductoInventario = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnFacturaCrear = new System.Windows.Forms.ToolStripButton();
             this.btnFacturaLista = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnReporteComisiones = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSesionCerrar = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatusBarLoginMessage = new System.Windows.Forms.ToolStripStatusLabel();
@@ -61,22 +61,22 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnUsuarioCrear,
             this.btnUsuarioLista,
-            this.toolStripSeparator2,
+            this.tsSeparator1,
             this.btnRolCrear,
             this.btnRolLista,
-            this.toolStripSeparator1,
+            this.tsSeparator2,
             this.btnClienteCrear,
             this.btnClienteLista,
-            this.toolStripSeparator3,
+            this.tsSeparator3,
             this.btnProductoCrear,
             this.btnProductoLista,
             this.btnProductoInventario,
-            this.toolStripSeparator4,
+            this.tsSeparator4,
             this.btnFacturaCrear,
             this.btnFacturaLista,
-            this.toolStripSeparator5,
+            this.tsSeparator5,
             this.btnReporteComisiones,
-            this.toolStripSeparator6,
+            this.tsSeparator6,
             this.btnSesionCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -111,11 +111,11 @@
             this.btnUsuarioLista.Text = "toolStripButton1";
             this.btnUsuarioLista.ToolTipText = "Ver Usuarios";
             // 
-            // toolStripSeparator2
+            // tsSeparator1
             // 
-            this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 52);
+            this.tsSeparator1.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator1.Name = "tsSeparator1";
+            this.tsSeparator1.Size = new System.Drawing.Size(6, 52);
             // 
             // btnRolCrear
             // 
@@ -143,11 +143,11 @@
             this.btnRolLista.Text = "toolStripButton1";
             this.btnRolLista.ToolTipText = "Ver Roles";
             // 
-            // toolStripSeparator1
+            // tsSeparator2
             // 
-            this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 52);
+            this.tsSeparator2.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator2.Name = "tsSeparator2";
+            this.tsSeparator2.Size = new System.Drawing.Size(6, 52);
             // 
             // btnClienteCrear
             // 
@@ -175,11 +175,11 @@
             this.btnClienteLista.Text = "toolStripButton1";
             this.btnClienteLista.ToolTipText = "Ver Clientes";
             // 
-            // toolStripSeparator3
+            // tsSeparator3
             // 
-            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 52);
+            this.tsSeparator3.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator3.Name = "tsSeparator3";
+            this.tsSeparator3.Size = new System.Drawing.Size(6, 52);
             // 
             // btnProductoCrear
             // 
@@ -220,11 +220,11 @@
             this.btnProductoInventario.Text = "toolStripButton1";
             this.btnProductoInventario.ToolTipText = "Administrar Inventario";
             // 
-            // toolStripSeparator4
+            // tsSeparator4
             // 
-            this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 52);
+            this.tsSeparator4.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator4.Name = "tsSeparator4";
+            this.tsSeparator4.Size = new System.Drawing.Size(6, 52);
             // 
             // btnFacturaCrear
             // 
@@ -252,11 +252,11 @@
             this.btnFacturaLista.Text = "toolStripButton1";
             this.btnFacturaLista.ToolTipText = "Ver Facturas";
             // 
-            // toolStripSeparator5
+            // tsSeparator5
             // 
-            this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 52);
+            this.tsSeparator5.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator5.Name = "tsSeparator5";
+            this.tsSeparator5.Size = new System.Drawing.Size(6, 52);
             // 
             // btnReporteComisiones
             // 
@@ -271,11 +271,11 @@
             this.btnReporteComisiones.Text = "toolStripButton1";
             this.btnReporteComisiones.ToolTipText = "Reporte de Comisiones";
             // 
-            // toolStripSeparator6
+            // tsSeparator6
             // 
-            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 52);
+            this.tsSeparator6.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator6.Name = "tsSeparator6";
+            this.tsSeparator6.Size = new System.Drawing.Size(6, 52);
             // 
             // btnSesionCerrar
             // 
@@ -338,22 +338,22 @@
         private System.Windows.Forms.ToolStripButton btnSesionCerrar;
         private System.Windows.Forms.ToolStripButton btnUsuarioCrear;
         private System.Windows.Forms.ToolStripButton btnUsuarioLista;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator tsSeparator1;
         private System.Windows.Forms.ToolStripButton btnRolCrear;
         private System.Windows.Forms.ToolStripButton btnRolLista;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator tsSeparator2;
         private System.Windows.Forms.ToolStripButton btnClienteCrear;
         private System.Windows.Forms.ToolStripButton btnClienteLista;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator tsSeparator3;
         private System.Windows.Forms.ToolStripButton btnProductoCrear;
         private System.Windows.Forms.ToolStripButton btnProductoLista;
         private System.Windows.Forms.ToolStripButton btnProductoInventario;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator tsSeparator4;
         private System.Windows.Forms.ToolStripButton btnFacturaCrear;
         private System.Windows.Forms.ToolStripButton btnFacturaLista;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripSeparator tsSeparator5;
         private System.Windows.Forms.ToolStripButton btnReporteComisiones;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSeparator tsSeparator6;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusBarLoginMessage;
     }
