@@ -10,7 +10,7 @@ namespace JEWApp
 {
     public class Database
     {
-        private string connectionString = @"Data Source=DESKTOP-52K7R3D\SQLEXPRESS;Initial Catalog=jewdb;Integrated Security=True";
+        private string connectionString = @"Data Source=WINDOWS-VG8GFDM\SQLEXPRESS;Initial Catalog=jewdb;Integrated Security=True";
         private SqlConnection db;
 
         public Database()
