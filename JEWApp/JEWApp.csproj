@@ -164,7 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jewapp-red.ico" />
-    <Content Include="jewapp.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
