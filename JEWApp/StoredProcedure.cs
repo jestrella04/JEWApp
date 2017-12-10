@@ -119,6 +119,41 @@ namespace JEWApp
             return affectedRows;
         }
 
+        public int InsertPermiso(int rolId, int tareaId, int permitido)
+        {
+            string storedProcedureName = "sp_insert_permiso";
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@RolId", SqlDbType.Int).Value = rolId;
+            cmd.Parameters.Add("@TareaId", SqlDbType.Int).Value = tareaId;
+            cmd.Parameters.Add("@Permitido", SqlDbType.Int).Value = permitido;
+
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
+            db.desconectar();
+
+            return affectedRows;
+        }
+
+        public int InsertProducto(int categoriaId, int medidaId, string nombreProducto, string descrProducto)
+        {
+            string storedProcedureName = "sp_insert_producto";
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@CategoriaId", SqlDbType.Int).Value = categoriaId;
+            cmd.Parameters.Add("@MedidaId", SqlDbType.Int).Value = medidaId;
+            cmd.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50).Value = nombreProducto;
+            cmd.Parameters.Add("@DesctProducto", SqlDbType.NVarChar, 255).Value = descrProducto;
+
+            db.conectar();
+            int affectedRows = cmd.ExecuteNonQuery();
+            db.desconectar();
+
+            return affectedRows;
+        }
+
         public int InsertProductoInventario(int productoId, double cantidadDisponible, double cantidadMinima, double precio)
         {
             string storedProcedureName = "sp_insert_producto_inventario";
@@ -142,6 +177,24 @@ namespace JEWApp
             db.desconectar();
 
             return affectedRows;
+        }
+
+        public int InsertRol(string nombreRol, string descrRol)
+        {
+            string storedProcedureName = "sp_insert_rol";
+            SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@RolNombre", SqlDbType.NVarChar, 50).Value = nombreRol;
+            cmd.Parameters.Add("@RolDescr", SqlDbType.NVarChar, 255).Value = descrRol;
+            cmd.Parameters.Add("@InsertedRolId", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            db.conectar();
+            cmd.ExecuteNonQuery();
+            int insertedId = Convert.ToInt32(cmd.Parameters["@InsertedRolId"].Value);
+            db.desconectar();
+
+            return insertedId;
         }
 
         public int InsertVehiculo(int clienteId, int marcaId, int modeloId, int anoVehiculo, string matriculaVehiculo, string descrVehiculo)
@@ -275,13 +328,18 @@ namespace JEWApp
             return dt;
         }
 
-        public DataTable SelectPermiso(int usuarioId)
+        public DataTable SelectPermiso(int rolId, int selectAll = 0)
         {
             string storedProcedureName = "sp_select_permiso";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-            da.SelectCommand.Parameters.Add("@UsuarioId", SqlDbType.Int).Value = usuarioId;
+            da.SelectCommand.Parameters.Add("@RolId", SqlDbType.Int).Value = rolId;
+
+            if (0 != selectAll)
+            {
+                da.SelectCommand.Parameters.Add("@SelectAll", SqlDbType.Int).Value = selectAll;
+            }
 
             DataTable dt = new DataTable();
             da.Fill(dt);

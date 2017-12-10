@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace JEWApp
@@ -24,16 +23,22 @@ namespace JEWApp
             loginForm = login;
         }
 
+        private void showLoginForm()
+        {
+            this.Close();
+            loginForm.txtLoginEmail.Text = "";
+            loginForm.txtLoginPassword.Text = "";
+            loginForm.Show();
+            loginForm.txtLoginEmail.Focus();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             bool sesionIniciada = Session.sesionIniciada;
 
             if (! sesionIniciada)
             {
-                this.Close();
-                loginForm.txtLoginEmail.Text = "";
-                loginForm.txtLoginPassword.Text = "";
-                loginForm.Show();
+                showLoginForm();
             }
 
             else
@@ -66,6 +71,13 @@ namespace JEWApp
                 if (permisoFacturaCrear == null || permisoFacturaCrear.Length == 0) btnFacturaCrear.Visible = false;
                 if (permisoFacturaVer == null || permisoFacturaVer.Length == 0) btnFacturaLista.Visible = false;
                 if (permisoReporteComisiones == null || permisoReporteComisiones.Length == 0) btnReporteComisiones.Visible = false;
+
+                if (!btnUsuarioCrear.Visible && !btnUsuarioLista.Visible) tsSeparator1.Visible = false;
+                if (!btnRolCrear.Visible && !btnRolLista.Visible) tsSeparator2.Visible = false;
+                if (!btnClienteCrear.Visible && !btnClienteLista.Visible) tsSeparator3.Visible = false;
+                if (!btnProductoCrear.Visible && !btnProductoLista.Visible && !btnProductoInventario.Visible) tsSeparator4.Visible = false;
+                if (!btnFacturaCrear.Visible && !btnFacturaLista.Visible) tsSeparator5.Visible = false;
+                if (!btnReporteComisiones.Visible /*&& !btnUsuarioLista.Visible*/) tsSeparator6.Visible = false;
             }
         }
 
@@ -80,10 +92,8 @@ namespace JEWApp
         private void btnSesionCerrar_Click(object sender, EventArgs e)
         {
             Session.sesionIniciada = false;
-            this.Close();
-            loginForm.txtLoginEmail.Text = "";
-            loginForm.txtLoginPassword.Text = "";
-            loginForm.Show();
+
+            showLoginForm();
         }
     }
 }
