@@ -113,7 +113,7 @@
             // 
             // tsSeparator1
             // 
-            this.tsSeparator1.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator1.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator1.Name = "tsSeparator1";
             this.tsSeparator1.Size = new System.Drawing.Size(6, 52);
             // 
@@ -145,7 +145,7 @@
             // 
             // tsSeparator2
             // 
-            this.tsSeparator2.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator2.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator2.Name = "tsSeparator2";
             this.tsSeparator2.Size = new System.Drawing.Size(6, 52);
             // 
@@ -177,7 +177,7 @@
             // 
             // tsSeparator3
             // 
-            this.tsSeparator3.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator3.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator3.Name = "tsSeparator3";
             this.tsSeparator3.Size = new System.Drawing.Size(6, 52);
             // 
@@ -222,7 +222,7 @@
             // 
             // tsSeparator4
             // 
-            this.tsSeparator4.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator4.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator4.Name = "tsSeparator4";
             this.tsSeparator4.Size = new System.Drawing.Size(6, 52);
             // 
@@ -254,7 +254,7 @@
             // 
             // tsSeparator5
             // 
-            this.tsSeparator5.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator5.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator5.Name = "tsSeparator5";
             this.tsSeparator5.Size = new System.Drawing.Size(6, 52);
             // 
@@ -273,7 +273,7 @@
             // 
             // tsSeparator6
             // 
-            this.tsSeparator6.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.tsSeparator6.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator6.Name = "tsSeparator6";
             this.tsSeparator6.Size = new System.Drawing.Size(6, 52);
             // 
@@ -316,8 +316,9 @@
             this.ClientSize = new System.Drawing.Size(2151, 1004);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Main";
             this.Text = "JEWApp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
