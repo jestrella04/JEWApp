@@ -17,13 +17,6 @@ namespace JEWApp
             InitializeComponent();
         }
 
-        private void showLoginError(string errorMsg)
-        {
-            lblLoginError.Text = errorMsg;
-            lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
-            lblLoginError.Visible = true;
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
@@ -43,7 +36,9 @@ namespace JEWApp
 
                 if ("Credenciales válidas." != loginResult)
                 {
-                    showLoginError(loginResult);
+                    lblLoginError.Text = loginResult;
+                    lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
+                    lblLoginError.Visible = true;
                 }
 
                 else
@@ -53,12 +48,10 @@ namespace JEWApp
 
                     if (int.TryParse(empleadoId, out int id))
                     {
-                        var usuarioInfo = sp.SelectEmpleado(id).Rows[0];
-
                         Session.sesionIniciada = true;
-                        Session.empleadoId = int.Parse(usuarioInfo["id"].ToString());
-                        Session.empleadoEmail = usuarioInfo["correo"].ToString();
-                        Session.empleadoPermisos = sp.SelectPermiso(int.Parse(usuarioInfo["id_rol"].ToString()));
+                        Session.empleadoId = id;
+                        Session.empleadoEmail = loginEmail;
+                        Session.empleadoPermisos = sp.SelectPermiso(id);
 
                         this.Visible = false;
                         Main mainForm = new Main(this);
@@ -67,14 +60,18 @@ namespace JEWApp
 
                     else
                     {
-                        showLoginError("Error desconocido, por favor intente de nuevo.");
+                        lblLoginError.Text = "Error desconocido, por favor intente de nuevo.";
+                        lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
+                        lblLoginError.Visible = true;
                     }
                 }
             }
 
             else
             {
-                showLoginError("Por favor introduzca su email y contraseña.");
+                lblLoginError.Text = "Por favor introduzca su email y contraseña.";
+                lblLoginError.Left = (this.Width / 2) - (lblLoginError.Width / 2);
+                lblLoginError.Visible = true;
             }
 
             this.Enabled = true;
