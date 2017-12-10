@@ -66,6 +66,12 @@
     <Compile Include="CrearCliente.Designer.cs">
       <DependentUpon>CrearCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearRol.Designer.cs">
+      <DependentUpon>CrearRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     <Compile Include="VerCliente.Designer.cs">
       <DependentUpon>VerCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerRol.Designer.cs">
+      <DependentUpon>VerRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="CrearCliente.resx">
       <DependentUpon>CrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearRol.resx">
+      <DependentUpon>CrearRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearUsuario.resx">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
@@ -124,6 +139,12 @@
     </Compile>
     <EmbeddedResource Include="VerCliente.resx">
       <DependentUpon>VerCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerRol.resx">
+      <DependentUpon>VerRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerUsuarios.resx">
+      <DependentUpon>VerUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
