@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace JEWApp
 {
     public class Database
     {
-        private string connectionString = @"Data Source=DESKTOP-52K7R3D\SQLEXPRESS;Initial Catalog=jewdb;Integrated Security=True";
+        private static ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["Prod1"];
+        private string connectionString = settings.ConnectionString;
         private SqlConnection db;
 
         public Database()
