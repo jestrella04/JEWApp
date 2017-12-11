@@ -95,5 +95,83 @@ namespace JEWApp
 
             showLoginForm();
         }
+
+        private void btnUsuarioCrear_Click(object sender, EventArgs e)
+        {
+            CrearUsuario formCrearUsuario = new CrearUsuario();
+
+            formCrearUsuario.MdiParent = this;
+            formCrearUsuario.Show();
+        }
+
+        private void btnUsuarioLista_Click(object sender, EventArgs e)
+        {
+            VerUsuarios formUsuarioLista = new VerUsuarios();
+
+            formUsuarioLista.MdiParent = this;
+            formUsuarioLista.Show();
+        }
+
+        private void btnRolCrear_Click(object sender, EventArgs e)
+        {
+            CrearRol formCrearRol = new CrearRol();
+
+            formCrearRol.MdiParent = this;
+            formCrearRol.Show();
+        }
+
+        private void btnRolLista_Click(object sender, EventArgs e)
+        {
+            VerRol formRolLista = new VerRol();
+
+            formRolLista.MdiParent = this;
+            formRolLista.Show();
+        }
+
+        private void btnClienteCrear_Click(object sender, EventArgs e)
+        {
+            CrearCliente formClienteCrear = new CrearCliente();
+
+            formClienteCrear.MdiParent = this;
+            formClienteCrear.Show();
+        }
+
+        private void btnClienteLista_Click(object sender, EventArgs e)
+        {
+            VerCliente formClienteLista = new VerCliente();
+
+            formClienteLista.MdiParent = this;
+            formClienteLista.Show();
+        }
+
+        private void btnProductoCrear_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
+
+        private void btnProductoLista_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
+
+        private void btnProductoInventario_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
+
+        private void btnFacturaCrear_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
+
+        private void btnFacturaLista_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
+
+        private void btnReporteComisiones_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
     }
 }

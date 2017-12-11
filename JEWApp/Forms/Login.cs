@@ -38,8 +38,18 @@ namespace JEWApp
             if (! String.IsNullOrWhiteSpace(loginEmail) && ! String.IsNullOrWhiteSpace(loginPassword))
             {
                 StoredProcedure sp = new StoredProcedure();
+                string loginResult;
 
-                string loginResult = sp.VerifyEmpleadoLogin(loginEmail, loginPassword);
+                try
+                {
+                    loginResult = sp.VerifyEmpleadoLogin(loginEmail, loginPassword);
+                }
+
+                catch(Exception dbEx)
+                {
+                    loginResult = "";
+                    if (!String.IsNullOrWhiteSpace(dbEx.Message)) loginResult = "Error conectando a la base de datos.";
+                }
 
                 if ("Credenciales válidas." != loginResult)
                 {

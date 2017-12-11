@@ -80,8 +80,7 @@
             this.btnSesionCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(2151, 68);
+            this.toolStrip1.Size = new System.Drawing.Size(1173, 68);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -97,6 +96,7 @@
             this.btnUsuarioCrear.Size = new System.Drawing.Size(52, 52);
             this.btnUsuarioCrear.Text = "toolStripButton1";
             this.btnUsuarioCrear.ToolTipText = "Crear Usuario";
+            this.btnUsuarioCrear.Click += new System.EventHandler(this.btnUsuarioCrear_Click);
             // 
             // btnUsuarioLista
             // 
@@ -110,6 +110,7 @@
             this.btnUsuarioLista.Size = new System.Drawing.Size(52, 52);
             this.btnUsuarioLista.Text = "toolStripButton1";
             this.btnUsuarioLista.ToolTipText = "Ver Usuarios";
+            this.btnUsuarioLista.Click += new System.EventHandler(this.btnUsuarioLista_Click);
             // 
             // tsSeparator1
             // 
@@ -129,6 +130,7 @@
             this.btnRolCrear.Size = new System.Drawing.Size(52, 52);
             this.btnRolCrear.Text = "toolStripButton1";
             this.btnRolCrear.ToolTipText = "Crear Rol";
+            this.btnRolCrear.Click += new System.EventHandler(this.btnRolCrear_Click);
             // 
             // btnRolLista
             // 
@@ -142,6 +144,7 @@
             this.btnRolLista.Size = new System.Drawing.Size(52, 52);
             this.btnRolLista.Text = "toolStripButton1";
             this.btnRolLista.ToolTipText = "Ver Roles";
+            this.btnRolLista.Click += new System.EventHandler(this.btnRolLista_Click);
             // 
             // tsSeparator2
             // 
@@ -161,6 +164,7 @@
             this.btnClienteCrear.Size = new System.Drawing.Size(52, 52);
             this.btnClienteCrear.Text = "toolStripButton1";
             this.btnClienteCrear.ToolTipText = "Crear Cliente";
+            this.btnClienteCrear.Click += new System.EventHandler(this.btnClienteCrear_Click);
             // 
             // btnClienteLista
             // 
@@ -174,6 +178,7 @@
             this.btnClienteLista.Size = new System.Drawing.Size(52, 52);
             this.btnClienteLista.Text = "toolStripButton1";
             this.btnClienteLista.ToolTipText = "Ver Clientes";
+            this.btnClienteLista.Click += new System.EventHandler(this.btnClienteLista_Click);
             // 
             // tsSeparator3
             // 
@@ -193,6 +198,7 @@
             this.btnProductoCrear.Size = new System.Drawing.Size(52, 52);
             this.btnProductoCrear.Text = "toolStripButton1";
             this.btnProductoCrear.ToolTipText = "Agregar Producto";
+            this.btnProductoCrear.Click += new System.EventHandler(this.btnProductoCrear_Click);
             // 
             // btnProductoLista
             // 
@@ -206,6 +212,7 @@
             this.btnProductoLista.Size = new System.Drawing.Size(52, 52);
             this.btnProductoLista.Text = "toolStripButton1";
             this.btnProductoLista.ToolTipText = "Ver Productos";
+            this.btnProductoLista.Click += new System.EventHandler(this.btnProductoLista_Click);
             // 
             // btnProductoInventario
             // 
@@ -219,6 +226,7 @@
             this.btnProductoInventario.Size = new System.Drawing.Size(52, 52);
             this.btnProductoInventario.Text = "toolStripButton1";
             this.btnProductoInventario.ToolTipText = "Administrar Inventario";
+            this.btnProductoInventario.Click += new System.EventHandler(this.btnProductoInventario_Click);
             // 
             // tsSeparator4
             // 
@@ -238,6 +246,7 @@
             this.btnFacturaCrear.Size = new System.Drawing.Size(52, 52);
             this.btnFacturaCrear.Text = "toolStripButton1";
             this.btnFacturaCrear.ToolTipText = "Crear Factura";
+            this.btnFacturaCrear.Click += new System.EventHandler(this.btnFacturaCrear_Click);
             // 
             // btnFacturaLista
             // 
@@ -251,6 +260,7 @@
             this.btnFacturaLista.Size = new System.Drawing.Size(52, 52);
             this.btnFacturaLista.Text = "toolStripButton1";
             this.btnFacturaLista.ToolTipText = "Ver Facturas";
+            this.btnFacturaLista.Click += new System.EventHandler(this.btnFacturaLista_Click);
             // 
             // tsSeparator5
             // 
@@ -270,6 +280,7 @@
             this.btnReporteComisiones.Size = new System.Drawing.Size(52, 52);
             this.btnReporteComisiones.Text = "toolStripButton1";
             this.btnReporteComisiones.ToolTipText = "Reporte de Comisiones";
+            this.btnReporteComisiones.Click += new System.EventHandler(this.btnReporteComisiones_Click);
             // 
             // tsSeparator6
             // 
@@ -296,29 +307,27 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatusBarLoginMessage});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 969);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 522);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 26, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(2151, 35);
+            this.statusStrip1.Size = new System.Drawing.Size(1173, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblStatusBarLoginMessage
             // 
             this.lblStatusBarLoginMessage.Name = "lblStatusBarLoginMessage";
-            this.lblStatusBarLoginMessage.Size = new System.Drawing.Size(206, 30);
+            this.lblStatusBarLoginMessage.Size = new System.Drawing.Size(118, 17);
             this.lblStatusBarLoginMessage.Text = "toolStripStatusLabel1";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2151, 1004);
+            this.ClientSize = new System.Drawing.Size(1173, 544);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Main";
             this.Text = "JEWApp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
