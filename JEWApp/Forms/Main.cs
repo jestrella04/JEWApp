@@ -35,7 +35,7 @@ namespace JEWApp
         private void showChildForm(Form childForm)
         {
             childForm.MdiParent = this;
-            childForm.MaximizeBox = false;
+            childForm.MinimizeBox = false;
             childForm.MaximizeBox = false;
             childForm.WindowState = FormWindowState.Maximized;
             childForm.Show();
