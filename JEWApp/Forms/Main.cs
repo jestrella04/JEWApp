@@ -32,6 +32,15 @@ namespace JEWApp
             loginForm.txtLoginEmail.Focus();
         }
 
+        private void showChildForm(Form childForm)
+        {
+            childForm.MdiParent = this;
+            childForm.MinimizeBox = false;
+            childForm.MaximizeBox = false;
+            childForm.WindowState = FormWindowState.Maximized;
+            childForm.Show();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             bool sesionIniciada = Session.sesionIniciada;
@@ -100,48 +109,42 @@ namespace JEWApp
         {
             CrearUsuario formCrearUsuario = new CrearUsuario();
 
-            formCrearUsuario.MdiParent = this;
-            formCrearUsuario.Show();
+            showChildForm(formCrearUsuario);
         }
 
         private void btnUsuarioLista_Click(object sender, EventArgs e)
         {
             VerUsuarios formUsuarioLista = new VerUsuarios();
 
-            formUsuarioLista.MdiParent = this;
-            formUsuarioLista.Show();
+            showChildForm(formUsuarioLista);
         }
 
         private void btnRolCrear_Click(object sender, EventArgs e)
         {
             CrearRol formCrearRol = new CrearRol();
 
-            formCrearRol.MdiParent = this;
-            formCrearRol.Show();
+            showChildForm(formCrearRol);
         }
 
         private void btnRolLista_Click(object sender, EventArgs e)
         {
             VerRol formRolLista = new VerRol();
 
-            formRolLista.MdiParent = this;
-            formRolLista.Show();
+            showChildForm(formRolLista);
         }
 
         private void btnClienteCrear_Click(object sender, EventArgs e)
         {
             CrearCliente formClienteCrear = new CrearCliente();
 
-            formClienteCrear.MdiParent = this;
-            formClienteCrear.Show();
+            showChildForm(formClienteCrear);
         }
 
         private void btnClienteLista_Click(object sender, EventArgs e)
         {
             VerCliente formClienteLista = new VerCliente();
 
-            formClienteLista.MdiParent = this;
-            formClienteLista.Show();
+            showChildForm(formClienteLista);
         }
 
         private void btnProductoCrear_Click(object sender, EventArgs e)
