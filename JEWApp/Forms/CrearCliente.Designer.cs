@@ -51,11 +51,15 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblResultadoMsg = new System.Windows.Forms.Label();
             this.cmbFechaDia = new System.Windows.Forms.ComboBox();
             this.cmbFechaMes = new System.Windows.Forms.ComboBox();
             this.txtAno = new System.Windows.Forms.TextBox();
+=======
+            this.gbCrearCliente = new System.Windows.Forms.GroupBox();
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.gbCrearCliente = new System.Windows.Forms.GroupBox();
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
@@ -84,6 +88,9 @@
             this.txtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumento.Location = new System.Drawing.Point(315, 100);
             this.txtDocumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+<<<<<<< HEAD
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+=======
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(372, 30);
@@ -114,8 +121,13 @@
             this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.cmbTipo.Location = new System.Drawing.Point(243, 34);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.cmbTipo.Location = new System.Drawing.Point(315, 50);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.cmbTipo.Location = new System.Drawing.Point(315, 50);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -218,8 +230,13 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtNombre.Location = new System.Drawing.Point(243, 114);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtNombre.Location = new System.Drawing.Point(315, 150);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.txtNombre.Location = new System.Drawing.Point(315, 150);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,8 +249,13 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtApellido.Location = new System.Drawing.Point(243, 153);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtApellido.Location = new System.Drawing.Point(315, 200);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.txtApellido.Location = new System.Drawing.Point(315, 200);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -246,8 +268,13 @@
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtDireccion.Location = new System.Drawing.Point(243, 192);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtDireccion.Location = new System.Drawing.Point(315, 250);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.txtDireccion.Location = new System.Drawing.Point(315, 250);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -260,8 +287,13 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtTelefono.Location = new System.Drawing.Point(243, 231);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtTelefono.Location = new System.Drawing.Point(315, 300);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.txtTelefono.Location = new System.Drawing.Point(315, 300);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -274,8 +306,13 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtCorreo.Location = new System.Drawing.Point(243, 270);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.txtCorreo.Location = new System.Drawing.Point(315, 350);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.txtCorreo.Location = new System.Drawing.Point(315, 350);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -288,8 +325,13 @@
             // 
             this.btnCrearCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnCrearCliente.Location = new System.Drawing.Point(239, 371);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnCrearCliente.Location = new System.Drawing.Point(315, 450);
+            this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.btnCrearCliente.Location = new System.Drawing.Point(315, 450);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -305,8 +347,13 @@
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnLimpiar.Location = new System.Drawing.Point(336, 371);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnLimpiar.Location = new System.Drawing.Point(441, 450);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.btnLimpiar.Location = new System.Drawing.Point(441, 450);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -322,8 +369,13 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnCancelar.Location = new System.Drawing.Point(433, 371);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnCancelar.Location = new System.Drawing.Point(567, 450);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.btnCancelar.Location = new System.Drawing.Point(567, 450);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -346,6 +398,7 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // groupBox1
             // 
@@ -377,6 +430,8 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
 =======
+=======
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             // gbCrearCliente
             // 
             this.gbCrearCliente.Controls.Add(this.label2);
@@ -406,6 +461,7 @@
             this.gbCrearCliente.Size = new System.Drawing.Size(1355, 576);
             this.gbCrearCliente.TabIndex = 37;
             this.gbCrearCliente.TabStop = false;
+<<<<<<< HEAD
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             // 
             // lblResultadoMsg
@@ -494,11 +550,14 @@
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(84, 26);
             this.txtAno.TabIndex = 38;
+=======
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             // 
             // CrearCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1036, 608);
             this.Controls.Add(this.lblResultadoMsg);
@@ -507,6 +566,14 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.ClientSize = new System.Drawing.Size(1381, 689);
+            this.Controls.Add(this.gbCrearCliente);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.ClientSize = new System.Drawing.Size(1381, 689);
             this.Controls.Add(this.gbCrearCliente);
@@ -550,11 +617,15 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblResultadoMsg;
         private System.Windows.Forms.TextBox txtAno;
         private System.Windows.Forms.ComboBox cmbFechaMes;
         private System.Windows.Forms.ComboBox cmbFechaDia;
+=======
+        private System.Windows.Forms.GroupBox gbCrearCliente;
+>>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
         private System.Windows.Forms.GroupBox gbCrearCliente;
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
