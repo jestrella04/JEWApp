@@ -28,7 +28,7 @@ namespace JEWApp
             return affectedRows;
         }
 
-        public int InsertCliente(int tipoId, int tipoDocId, string docId, string nombreCliente, string apellidoCliente, string direccionCliente, string telefonoCliente, string correoCliente, int fechaNacDia = 0, int fechaNacMes = 0, int fechaNacAno = 0)
+        public int InsertCliente(int tipoId, int tipoDocId, string docId, string nombreCliente, string apellidoCliente, string direccionCliente, string telefonoCliente, string correoCliente, int fechaNacDia, int fechaNacMes, int fechaNacAno)
         {
             string storedProcedureName = "sp_insert_cliente";
             SqlCommand cmd = new SqlCommand(storedProcedureName, db.getDbConnection());
@@ -42,10 +42,9 @@ namespace JEWApp
             cmd.Parameters.Add("@DireccionCliente", SqlDbType.NVarChar, 50).Value = direccionCliente;
             cmd.Parameters.Add("@TelefonoCliente", SqlDbType.NChar, 10).Value = telefonoCliente;
             cmd.Parameters.Add("@CorreoCliente", SqlDbType.NVarChar, 50).Value = correoCliente;
-
-            if (fechaNacDia > 0) cmd.Parameters.Add("@FechaNacDia", SqlDbType.TinyInt).Value = fechaNacDia;
-            if (fechaNacMes > 0) cmd.Parameters.Add("@FechaNacMes", SqlDbType.TinyInt).Value = fechaNacMes;
-            if (fechaNacAno > 0) cmd.Parameters.Add("@FechaNacAno", SqlDbType.Int).Value = fechaNacAno;
+            cmd.Parameters.Add("@FechaNacDia", SqlDbType.TinyInt).Value = fechaNacDia;
+            cmd.Parameters.Add("@FechaNacMes", SqlDbType.TinyInt).Value = fechaNacMes;
+            cmd.Parameters.Add("@FechaNacAno", SqlDbType.Int).Value = fechaNacAno;
 
             db.conectar();
             int affectedRows = cmd.ExecuteNonQuery();

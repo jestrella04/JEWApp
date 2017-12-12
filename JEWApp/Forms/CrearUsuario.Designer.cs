@@ -42,6 +42,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
@@ -57,16 +58,20 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtContrasena1 = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +94,9 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +189,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.label8.Size = new System.Drawing.Size(107, 20);
@@ -196,6 +205,9 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.label8.Size = new System.Drawing.Size(102, 20);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.label8.TabIndex = 7;
             this.label8.Text = "Contraseña";
             // 
@@ -207,14 +219,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.cmbRol.Location = new System.Drawing.Point(237, 36);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(280, 28);
+            this.cmbRol.Size = new System.Drawing.Size(92, 28);
             this.cmbRol.TabIndex = 9;
             // 
+<<<<<<< HEAD
             // cmbTipoDoc
             // 
             this.cmbTipoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,6 +276,10 @@
 =======
             // comboBox2
             // 
+=======
+            // comboBox2
+            // 
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(552, 77);
@@ -267,11 +287,15 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(130, 28);
             this.comboBox2.TabIndex = 10;
+<<<<<<< HEAD
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             // 
             // txtDocumento
             // 
             this.txtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,6 +319,10 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.txtDocumento.Location = new System.Drawing.Point(237, 79);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(280, 26);
             this.txtDocumento.TabIndex = 11;
@@ -302,6 +330,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,6 +354,10 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.txtNombre.Location = new System.Drawing.Point(236, 120);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(280, 26);
             this.txtNombre.TabIndex = 12;
@@ -332,6 +365,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,6 +389,10 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.txtApellido.Location = new System.Drawing.Point(236, 161);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(280, 26);
             this.txtApellido.TabIndex = 13;
@@ -362,6 +400,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -385,6 +424,10 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.txtTelefono.Location = new System.Drawing.Point(236, 202);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(280, 26);
             this.txtTelefono.TabIndex = 14;
@@ -392,6 +435,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -415,31 +459,27 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.txtCorreo.Location = new System.Drawing.Point(237, 243);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(280, 26);
             this.txtCorreo.TabIndex = 15;
             // 
-            // txtContrasena1
+            // txtContrasena
             // 
-<<<<<<< HEAD
-            this.txtContrasena1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena1.Location = new System.Drawing.Point(236, 284);
-            this.txtContrasena1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContrasena1.Name = "txtContrasena1";
-            this.txtContrasena1.Size = new System.Drawing.Size(280, 26);
-            this.txtContrasena1.TabIndex = 16;
-=======
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(236, 284);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(280, 26);
             this.txtContrasena.TabIndex = 16;
->>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             // 
             // btnCrear
             // 
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -463,16 +503,20 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.btnCrear.Location = new System.Drawing.Point(236, 347);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(90, 44);
             this.btnCrear.TabIndex = 18;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // BtnLimpiar
             // 
             this.BtnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -496,16 +540,20 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.BtnLimpiar.Location = new System.Drawing.Point(331, 347);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(90, 44);
             this.BtnLimpiar.TabIndex = 19;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
-            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -529,12 +577,15 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.BtnCancelar.Location = new System.Drawing.Point(426, 347);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(90, 44);
             this.BtnCancelar.TabIndex = 20;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // pictureBox1
             // 
@@ -550,6 +601,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             // groupBox1
@@ -560,6 +612,10 @@
             // groupBox1
             // 
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+            // groupBox1
+            // 
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.groupBox1.Controls.Add(this.cmbRol);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.BtnCancelar);
@@ -569,10 +625,14 @@
             this.groupBox1.Controls.Add(this.btnCrear);
             this.groupBox1.Controls.Add(this.label5);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.txtContrasena1);
 =======
             this.groupBox1.Controls.Add(this.txtContrasena);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+            this.groupBox1.Controls.Add(this.txtContrasena);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.label7);
@@ -580,14 +640,19 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtApellido);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.cmbTipoDoc);
+=======
+            this.groupBox1.Controls.Add(this.comboBox2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtDocumento);
-            this.groupBox1.Location = new System.Drawing.Point(45, 118);
+            this.groupBox1.Location = new System.Drawing.Point(53, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(735, 459);
+            this.groupBox1.Size = new System.Drawing.Size(727, 423);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+<<<<<<< HEAD
 =======
             // gbCrearUsuario
             // 
@@ -663,6 +728,8 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             // 
             // CrearUsuario
             // 
@@ -672,14 +739,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.ClientSize = new System.Drawing.Size(1036, 615);
             this.Controls.Add(this.lblResultadoMsg);
+=======
+            this.ClientSize = new System.Drawing.Size(1036, 531);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.ClientSize = new System.Drawing.Size(1381, 654);
@@ -708,9 +780,11 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
             this.Name = "CrearUsuario";
             this.Text = "CrearUsuario";
-            this.Load += new System.EventHandler(this.CrearUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -734,6 +808,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
         private System.Windows.Forms.ComboBox cmbTipoDoc;
@@ -749,16 +824,20 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+        private System.Windows.Forms.ComboBox comboBox2;
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
         private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtContrasena1;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -781,5 +860,8 @@
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
 =======
 >>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
+=======
+        private System.Windows.Forms.GroupBox groupBox1;
+>>>>>>> parent of 00a5089... Misc fixes and enhancements.
     }
 }
