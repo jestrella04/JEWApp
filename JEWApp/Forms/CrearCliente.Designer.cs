@@ -53,6 +53,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblResultadoMsg = new System.Windows.Forms.Label();
             this.cmbFechaDia = new System.Windows.Forms.ComboBox();
@@ -61,12 +64,15 @@
 =======
             this.gbCrearCliente = new System.Windows.Forms.GroupBox();
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.gbCrearCliente = new System.Windows.Forms.GroupBox();
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.groupBox1 = new System.Windows.Forms.GroupBox();
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -93,9 +99,6 @@
 <<<<<<< HEAD
             this.txtDocumento.Location = new System.Drawing.Point(315, 100);
             this.txtDocumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-<<<<<<< HEAD
->>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
-=======
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
             this.txtDocumento.Location = new System.Drawing.Point(243, 75);
@@ -132,12 +135,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.cmbTipo.Location = new System.Drawing.Point(243, 34);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.cmbTipo.Location = new System.Drawing.Point(315, 50);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.cmbTipo.Location = new System.Drawing.Point(315, 50);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -146,6 +153,8 @@
             this.cmbTipo.Location = new System.Drawing.Point(243, 34);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(280, 28);
             this.cmbTipo.TabIndex = 23;
@@ -255,12 +264,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtNombre.Location = new System.Drawing.Point(243, 114);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.txtNombre.Location = new System.Drawing.Point(315, 150);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.txtNombre.Location = new System.Drawing.Point(315, 150);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -269,6 +282,8 @@
             this.txtNombre.Location = new System.Drawing.Point(243, 114);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(280, 26);
             this.txtNombre.TabIndex = 28;
@@ -279,12 +294,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtApellido.Location = new System.Drawing.Point(243, 153);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.txtApellido.Location = new System.Drawing.Point(315, 200);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.txtApellido.Location = new System.Drawing.Point(315, 200);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -293,6 +312,8 @@
             this.txtApellido.Location = new System.Drawing.Point(243, 153);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(280, 26);
             this.txtApellido.TabIndex = 29;
@@ -303,12 +324,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtDireccion.Location = new System.Drawing.Point(243, 192);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.txtDireccion.Location = new System.Drawing.Point(315, 250);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.txtDireccion.Location = new System.Drawing.Point(315, 250);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -317,6 +342,8 @@
             this.txtDireccion.Location = new System.Drawing.Point(243, 192);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(280, 26);
             this.txtDireccion.TabIndex = 30;
@@ -327,12 +354,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtTelefono.Location = new System.Drawing.Point(243, 231);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.txtTelefono.Location = new System.Drawing.Point(315, 300);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.txtTelefono.Location = new System.Drawing.Point(315, 300);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -341,6 +372,8 @@
             this.txtTelefono.Location = new System.Drawing.Point(243, 231);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(280, 26);
             this.txtTelefono.TabIndex = 31;
@@ -351,12 +384,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtCorreo.Location = new System.Drawing.Point(243, 270);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.txtCorreo.Location = new System.Drawing.Point(315, 350);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.txtCorreo.Location = new System.Drawing.Point(315, 350);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -365,6 +402,8 @@
             this.txtCorreo.Location = new System.Drawing.Point(243, 270);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(280, 26);
             this.txtCorreo.TabIndex = 32;
@@ -375,12 +414,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.btnCrearCliente.Location = new System.Drawing.Point(239, 371);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.btnCrearCliente.Location = new System.Drawing.Point(315, 450);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.btnCrearCliente.Location = new System.Drawing.Point(315, 450);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -389,6 +432,8 @@
             this.btnCrearCliente.Location = new System.Drawing.Point(239, 371);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.btnCrearCliente.Name = "btnCrearCliente";
             this.btnCrearCliente.Size = new System.Drawing.Size(90, 44);
             this.btnCrearCliente.TabIndex = 33;
@@ -402,12 +447,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.btnLimpiar.Location = new System.Drawing.Point(336, 371);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.btnLimpiar.Location = new System.Drawing.Point(441, 450);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.btnLimpiar.Location = new System.Drawing.Point(441, 450);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -416,6 +465,8 @@
             this.btnLimpiar.Location = new System.Drawing.Point(336, 371);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(90, 44);
             this.btnLimpiar.TabIndex = 34;
@@ -429,12 +480,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.btnCancelar.Location = new System.Drawing.Point(433, 371);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
 =======
             this.btnCancelar.Location = new System.Drawing.Point(567, 450);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.btnCancelar.Location = new System.Drawing.Point(567, 450);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -443,6 +498,8 @@
             this.btnCancelar.Location = new System.Drawing.Point(433, 371);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 44);
             this.btnCancelar.TabIndex = 35;
@@ -463,6 +520,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtAno);
@@ -505,8 +565,6 @@
             this.groupBox1.TabStop = false;
 <<<<<<< HEAD
 =======
-=======
->>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             // gbCrearCliente
             // 
             this.gbCrearCliente.Controls.Add(this.label2);
@@ -536,7 +594,6 @@
             this.gbCrearCliente.Size = new System.Drawing.Size(1355, 576);
             this.gbCrearCliente.TabIndex = 37;
             this.gbCrearCliente.TabStop = false;
-<<<<<<< HEAD
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
             // 
             // lblResultadoMsg
@@ -625,10 +682,13 @@
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(84, 26);
             this.txtAno.TabIndex = 38;
+<<<<<<< HEAD
 =======
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             // 
             // CrearCliente
             // 
@@ -637,6 +697,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.ClientSize = new System.Drawing.Size(1036, 608);
             this.Controls.Add(this.lblResultadoMsg);
             this.Controls.Add(this.groupBox1);
@@ -652,6 +715,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
             this.ClientSize = new System.Drawing.Size(1381, 689);
             this.Controls.Add(this.gbCrearCliente);
@@ -668,6 +732,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
             this.Name = "CrearCliente";
             this.Text = "CrearCliente";
             this.Load += new System.EventHandler(this.CrearCliente_Load);
@@ -705,6 +771,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblResultadoMsg;
         private System.Windows.Forms.TextBox txtAno;
@@ -713,11 +782,14 @@
 =======
         private System.Windows.Forms.GroupBox gbCrearCliente;
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
+<<<<<<< HEAD
 =======
         private System.Windows.Forms.GroupBox gbCrearCliente;
 >>>>>>> 82f362f123f0234af4d94c93525a4ddd0725671c
 =======
         private System.Windows.Forms.GroupBox groupBox1;
 >>>>>>> parent of 39ce2d1... added a lot of new forms and fixed locations
+=======
+>>>>>>> parent of 09efaf5... Merge branch 'dev' of https://github.com/jestrella04/JEWApp into dev
     }
 }
