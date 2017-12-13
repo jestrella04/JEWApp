@@ -46,12 +46,6 @@ namespace JEWApp
             string pass1 = txtContrasena1.Text;
             string pass2 = txtContrasena2.Text;
 
-            if (String.IsNullOrWhiteSpace(doc) || String.IsNullOrWhiteSpace(nombre) || String.IsNullOrWhiteSpace(apellido) || String.IsNullOrWhiteSpace(telefono) || String.IsNullOrWhiteSpace(correo))
-            {
-                error = true;
-                errorMsg = "Rellene todos los campos requeridos.";
-            }
-
             if (telefono.Length != 10)
             {
                 error = true;
@@ -64,13 +58,19 @@ namespace JEWApp
                 errorMsg = "El formato de correo es inválido.";
             }
 
-            if (String.IsNullOrWhiteSpace(pass1) && String.IsNullOrWhiteSpace(pass2))
+            if (!String.IsNullOrWhiteSpace(pass1) && !String.IsNullOrWhiteSpace(pass2))
             {
                 if (pass1 != pass2)
                 {
                     error = true;
                     errorMsg = "La contraseña no coincide.";
                 }
+            }
+
+            if (String.IsNullOrWhiteSpace(doc) || String.IsNullOrWhiteSpace(nombre) || String.IsNullOrWhiteSpace(apellido) || String.IsNullOrWhiteSpace(telefono) || String.IsNullOrWhiteSpace(correo) || String.IsNullOrWhiteSpace(pass1) || String.IsNullOrWhiteSpace(pass2))
+            {
+                error = true;
+                errorMsg = "Rellene todos los campos requeridos.";
             }
 
             if (error)

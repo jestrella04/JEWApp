@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JEWApp.Forms
 {
-    public partial class VerVehiculos : Form
+    public partial class VerVehiculoLista : Form
     {
-        public VerVehiculos()
+        public VerVehiculoLista()
         {
             InitializeComponent();
         }

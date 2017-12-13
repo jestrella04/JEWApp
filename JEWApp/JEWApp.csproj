@@ -120,57 +120,57 @@
     <Compile Include="Forms\VerFactura.Designer.cs">
       <DependentUpon>VerFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerFacturasLista.cs">
+    <Compile Include="Forms\VerFacturaLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerFacturasLista.Designer.cs">
-      <DependentUpon>VerFacturasLista.cs</DependentUpon>
+    <Compile Include="Forms\VerFacturaLista.Designer.cs">
+      <DependentUpon>VerFacturaLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerInventario.cs">
+    <Compile Include="Forms\VerProductoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerInventario.Designer.cs">
-      <DependentUpon>VerInventario.cs</DependentUpon>
+    <Compile Include="Forms\VerProductoInventario.Designer.cs">
+      <DependentUpon>VerProductoInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerProductos.cs">
+    <Compile Include="Forms\VerProductoLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerProductos.Designer.cs">
-      <DependentUpon>VerProductos.cs</DependentUpon>
+    <Compile Include="Forms\VerProductoLista.Designer.cs">
+      <DependentUpon>VerProductoLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerVehiculos.cs">
+    <Compile Include="Forms\VerVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerVehiculos.Designer.cs">
-      <DependentUpon>VerVehiculos.cs</DependentUpon>
+    <Compile Include="Forms\VerVehiculo.Designer.cs">
+      <DependentUpon>VerVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerVehiculosLista.cs">
+    <Compile Include="Forms\VerVehiculoLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerVehiculosLista.Designer.cs">
-      <DependentUpon>VerVehiculosLista.cs</DependentUpon>
+    <Compile Include="Forms\VerVehiculoLista.Designer.cs">
+      <DependentUpon>VerVehiculoLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\StoredProcedure.cs" />
-    <Compile Include="Forms\VerCliente.cs">
+    <Compile Include="Forms\VerClienteLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerCliente.Designer.cs">
-      <DependentUpon>VerCliente.cs</DependentUpon>
+    <Compile Include="Forms\VerClienteLista.Designer.cs">
+      <DependentUpon>VerClienteLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerRol.cs">
+    <Compile Include="Forms\VerRolLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerRol.Designer.cs">
-      <DependentUpon>VerRol.cs</DependentUpon>
+    <Compile Include="Forms\VerRolLista.Designer.cs">
+      <DependentUpon>VerRolLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VerUsuarios.cs">
+    <Compile Include="Forms\VerUsuarioLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VerUsuarios.Designer.cs">
-      <DependentUpon>VerUsuarios.cs</DependentUpon>
+    <Compile Include="Forms\VerUsuarioLista.Designer.cs">
+      <DependentUpon>VerUsuarioLista.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\CrearCliente.resx">
       <DependentUpon>CrearCliente.cs</DependentUpon>
@@ -199,20 +199,20 @@
     <EmbeddedResource Include="Forms\VerFactura.resx">
       <DependentUpon>VerFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerFacturasLista.resx">
-      <DependentUpon>VerFacturasLista.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerFacturaLista.resx">
+      <DependentUpon>VerFacturaLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerInventario.resx">
-      <DependentUpon>VerInventario.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerProductoInventario.resx">
+      <DependentUpon>VerProductoInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerProductos.resx">
-      <DependentUpon>VerProductos.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerProductoLista.resx">
+      <DependentUpon>VerProductoLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerVehiculos.resx">
-      <DependentUpon>VerVehiculos.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerVehiculo.resx">
+      <DependentUpon>VerVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerVehiculosLista.resx">
-      <DependentUpon>VerVehiculosLista.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerVehiculoLista.resx">
+      <DependentUpon>VerVehiculoLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -223,14 +223,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\VerCliente.resx">
-      <DependentUpon>VerCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerClienteLista.resx">
+      <DependentUpon>VerClienteLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerRol.resx">
-      <DependentUpon>VerRol.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerRolLista.resx">
+      <DependentUpon>VerRolLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VerUsuarios.resx">
-      <DependentUpon>VerUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VerUsuarioLista.resx">
+      <DependentUpon>VerUsuarioLista.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Config\Database.config">
       <SubType>Designer</SubType>

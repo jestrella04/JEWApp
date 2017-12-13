@@ -1,6 +1,6 @@
 ﻿namespace JEWApp.Forms
 {
-    partial class VerInventario
+    partial class VerVehiculoLista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgwInventarioProductos = new System.Windows.Forms.DataGridView();
+            this.dgwVehiculos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwInventarioProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwVehiculos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgwInventarioProductos
+            // dgwVehiculos
             // 
-            this.dgwInventarioProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwInventarioProductos.Location = new System.Drawing.Point(12, 115);
-            this.dgwInventarioProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgwInventarioProductos.Name = "dgwInventarioProductos";
-            this.dgwInventarioProductos.RowTemplate.Height = 24;
-            this.dgwInventarioProductos.Size = new System.Drawing.Size(1357, 526);
-            this.dgwInventarioProductos.TabIndex = 5;
+            this.dgwVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwVehiculos.Location = new System.Drawing.Point(12, 115);
+            this.dgwVehiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgwVehiculos.Name = "dgwVehiculos";
+            this.dgwVehiculos.RowTemplate.Height = 24;
+            this.dgwVehiculos.Size = new System.Drawing.Size(1357, 528);
+            this.dgwVehiculos.TabIndex = 3;
             // 
             // label1
             // 
@@ -49,20 +49,20 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(120, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 39);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Inventario de Productos";
+            this.label1.Size = new System.Drawing.Size(352, 39);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Listado de Vehiculos";
             // 
-            // VerInventario
+            // VerVehiculosLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1381, 654);
-            this.Controls.Add(this.dgwInventarioProductos);
+            this.Controls.Add(this.dgwVehiculos);
             this.Controls.Add(this.label1);
-            this.Name = "VerInventario";
-            this.Text = "VerInventario";
-            ((System.ComponentModel.ISupportInitialize)(this.dgwInventarioProductos)).EndInit();
+            this.Name = "VerVehiculosLista";
+            this.Text = "VerVehiculosLista";
+            ((System.ComponentModel.ISupportInitialize)(this.dgwVehiculos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,7 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgwInventarioProductos;
+        private System.Windows.Forms.DataGridView dgwVehiculos;
         private System.Windows.Forms.Label label1;
     }
 }

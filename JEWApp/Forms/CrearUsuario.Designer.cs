@@ -50,9 +50,9 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCrearUsuario = new System.Windows.Forms.GroupBox();
-            this.lblResultadoMsg = new System.Windows.Forms.Label();
             this.txtContrasena2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblResultadoMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCrearUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -147,20 +147,22 @@
             // 
             // cmbRol
             // 
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(239, 33);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(280, 28);
             this.cmbRol.TabIndex = 9;
             // 
             // cmbTipoDoc
             // 
+            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoDoc.FormattingEnabled = true;
             this.cmbTipoDoc.Location = new System.Drawing.Point(547, 73);
-            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(130, 28);
             this.cmbTipoDoc.TabIndex = 10;
@@ -169,7 +171,7 @@
             // 
             this.txtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumento.Location = new System.Drawing.Point(239, 73);
-            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(280, 26);
             this.txtDocumento.TabIndex = 11;
@@ -178,7 +180,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(239, 114);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(280, 26);
             this.txtNombre.TabIndex = 12;
@@ -187,7 +189,7 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(239, 154);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(280, 26);
             this.txtApellido.TabIndex = 13;
@@ -196,7 +198,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(239, 195);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(280, 26);
             this.txtTelefono.TabIndex = 14;
@@ -205,7 +207,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(239, 236);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(280, 26);
             this.txtCorreo.TabIndex = 15;
@@ -214,8 +216,9 @@
             // 
             this.txtContrasena1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena1.Location = new System.Drawing.Point(239, 276);
-            this.txtContrasena1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasena1.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena1.Name = "txtContrasena1";
+            this.txtContrasena1.PasswordChar = '*';
             this.txtContrasena1.Size = new System.Drawing.Size(280, 26);
             this.txtContrasena1.TabIndex = 16;
             // 
@@ -223,7 +226,7 @@
             // 
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.Location = new System.Drawing.Point(239, 375);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(90, 49);
             this.btnCrear.TabIndex = 18;
@@ -235,7 +238,7 @@
             // 
             this.BtnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Location = new System.Drawing.Point(334, 375);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(90, 49);
             this.BtnLimpiar.TabIndex = 19;
@@ -247,7 +250,7 @@
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Location = new System.Drawing.Point(428, 375);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(90, 49);
             this.BtnCancelar.TabIndex = 20;
@@ -293,23 +296,13 @@
             this.gbCrearUsuario.TabIndex = 22;
             this.gbCrearUsuario.TabStop = false;
             // 
-            // lblResultadoMsg
-            // 
-            this.lblResultadoMsg.AutoSize = true;
-            this.lblResultadoMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultadoMsg.Location = new System.Drawing.Point(337, 43);
-            this.lblResultadoMsg.Name = "lblResultadoMsg";
-            this.lblResultadoMsg.Size = new System.Drawing.Size(177, 20);
-            this.lblResultadoMsg.TabIndex = 39;
-            this.lblResultadoMsg.Text = "Aquí va la respuesta.";
-            this.lblResultadoMsg.Visible = false;
-            // 
             // txtContrasena2
             // 
             this.txtContrasena2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena2.Location = new System.Drawing.Point(239, 314);
             this.txtContrasena2.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena2.Name = "txtContrasena2";
+            this.txtContrasena2.PasswordChar = '*';
             this.txtContrasena2.Size = new System.Drawing.Size(280, 26);
             this.txtContrasena2.TabIndex = 22;
             // 
@@ -324,6 +317,17 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "Confirmar contraseña:";
             // 
+            // lblResultadoMsg
+            // 
+            this.lblResultadoMsg.AutoSize = true;
+            this.lblResultadoMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoMsg.Location = new System.Drawing.Point(337, 43);
+            this.lblResultadoMsg.Name = "lblResultadoMsg";
+            this.lblResultadoMsg.Size = new System.Drawing.Size(177, 20);
+            this.lblResultadoMsg.TabIndex = 39;
+            this.lblResultadoMsg.Text = "Aquí va la respuesta.";
+            this.lblResultadoMsg.Visible = false;
+            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,7 +338,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearUsuario";
             this.Text = "CrearUsuario";
             this.Load += new System.EventHandler(this.CrearUsuario_Load);

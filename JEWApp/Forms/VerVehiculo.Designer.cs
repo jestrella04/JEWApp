@@ -1,6 +1,6 @@
 ﻿namespace JEWApp.Forms
 {
-    partial class VerVehiculos
+    partial class VerVehiculo
     {
         /// <summary>
         /// Required designer variable.

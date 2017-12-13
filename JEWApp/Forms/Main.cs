@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using JEWApp.Forms;
 
 namespace JEWApp
 {
@@ -79,14 +80,14 @@ namespace JEWApp
                 if (permisoProductoInventario == null || permisoProductoInventario.Length == 0) btnProductoInventario.Visible = false;
                 if (permisoFacturaCrear == null || permisoFacturaCrear.Length == 0) btnFacturaCrear.Visible = false;
                 if (permisoFacturaVer == null || permisoFacturaVer.Length == 0) btnFacturaLista.Visible = false;
-                if (permisoReporteComisiones == null || permisoReporteComisiones.Length == 0) btnReporteComisiones.Visible = false;
+                if (permisoReporteComisiones == null || permisoReporteComisiones.Length == 0) btnReporteCumpleanos.Visible = false;
 
                 if (!btnUsuarioCrear.Visible && !btnUsuarioLista.Visible) tsSeparator1.Visible = false;
                 if (!btnRolCrear.Visible && !btnRolLista.Visible) tsSeparator2.Visible = false;
                 if (!btnClienteCrear.Visible && !btnClienteLista.Visible) tsSeparator3.Visible = false;
                 if (!btnProductoCrear.Visible && !btnProductoLista.Visible && !btnProductoInventario.Visible) tsSeparator4.Visible = false;
                 if (!btnFacturaCrear.Visible && !btnFacturaLista.Visible) tsSeparator5.Visible = false;
-                if (!btnReporteComisiones.Visible /*&& !btnUsuarioLista.Visible*/) tsSeparator6.Visible = false;
+                if (!btnReporteCumpleanos.Visible /*&& !btnUsuarioLista.Visible*/) tsSeparator6.Visible = false;
             }
         }
 
@@ -149,30 +150,45 @@ namespace JEWApp
 
         private void btnProductoCrear_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            CrearProducto formCrearProducto = new CrearProducto();
+
+            showChildForm(formCrearProducto);
         }
 
         private void btnProductoLista_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            VerProductoLista formProductoLista = new VerProductoLista();
+
+            showChildForm(formProductoLista);
         }
 
         private void btnProductoInventario_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            VerProductoInventario formVerInventario = new VerProductoInventario();
+
+            showChildForm(formVerInventario);
         }
 
         private void btnFacturaCrear_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            CrearFactura formCrearFactura = new CrearFactura();
+
+            showChildForm(formCrearFactura);
         }
 
         private void btnFacturaLista_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            VerFacturaLista formFacturaLista = new VerFacturaLista();
+
+            showChildForm(formFacturaLista);
         }
 
         private void btnReporteComisiones_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No está listo");
+        }
+
+        private void btnReporteCumpleanos_Click(object sender, EventArgs e)
         {
             MessageBox.Show("No está listo");
         }

@@ -22,7 +22,19 @@ namespace JEWApp
             cmd.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;
@@ -48,7 +60,19 @@ namespace JEWApp
             if (fechaNacAno > 0) cmd.Parameters.Add("@FechaNacAno", SqlDbType.Int).Value = fechaNacAno;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;
@@ -69,8 +93,20 @@ namespace JEWApp
             cmd.Parameters.Add("@CorreoEmpleado", SqlDbType.NVarChar, 50).Value = correoEmpleado;
             cmd.Parameters.Add("@PasswordEmpleado", SqlDbType.NVarChar, 255).Value = passwordEmpleado;
 
+            int affectedRows;
+
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+            
             db.desconectar();
 
             return affectedRows;
@@ -88,8 +124,20 @@ namespace JEWApp
             cmd.Parameters.Add("@InsertedFacturaId", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             db.conectar();
-            cmd.ExecuteNonQuery();
-            int insertedId = Convert.ToInt32(cmd.Parameters["@InsertedFacturaId"].Value);
+
+            int insertedId;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                insertedId = Convert.ToInt32(cmd.Parameters["@InsertedFacturaId"].Value);
+            }
+
+            catch
+            {
+                insertedId = 0;
+            }
+
             db.desconectar();
 
             return insertedId;
@@ -114,7 +162,19 @@ namespace JEWApp
             cmd.Parameters["@Precio"].Scale = 2;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;
@@ -131,7 +191,19 @@ namespace JEWApp
             cmd.Parameters.Add("@Permitido", SqlDbType.Int).Value = permitido;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;
@@ -149,7 +221,19 @@ namespace JEWApp
             cmd.Parameters.Add("@DesctProducto", SqlDbType.NVarChar, 255).Value = descrProducto;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;
@@ -174,7 +258,19 @@ namespace JEWApp
             cmd.Parameters["@Precio"].Scale = 2;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;
@@ -191,8 +287,20 @@ namespace JEWApp
             cmd.Parameters.Add("@InsertedRolId", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             db.conectar();
-            cmd.ExecuteNonQuery();
-            int insertedId = Convert.ToInt32(cmd.Parameters["@InsertedRolId"].Value);
+
+            int insertedId;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                insertedId = Convert.ToInt32(cmd.Parameters["@InsertedRolId"].Value);
+            }
+
+            catch
+            {
+                insertedId = 0;
+            }
+            
             db.desconectar();
 
             return insertedId;
@@ -212,7 +320,19 @@ namespace JEWApp
             cmd.Parameters.Add("@DescrVehiculo", SqlDbType.NVarChar, 255).Value = descrVehiculo;
 
             db.conectar();
-            int affectedRows = cmd.ExecuteNonQuery();
+
+            int affectedRows;
+
+            try
+            {
+                affectedRows = cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                affectedRows = 0;
+            }
+
             db.desconectar();
 
             return affectedRows;

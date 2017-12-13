@@ -44,19 +44,16 @@ namespace JEWApp
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
 
-            string fechaDia = cmbFechaDia.SelectedValue.ToString();
-            string fechaMes = cmbFechaMes.SelectedValue.ToString();
+            string fechaDia = "";
+            string fechaMes = "";
             string fechaAno = txtFechaAno.Text;
 
             int fechaDiaInt = 0;
             int fechaMesInt = 0;
             int fechaAnoInt = 0;
 
-            if (String.IsNullOrWhiteSpace(doc) || String.IsNullOrWhiteSpace(nombre) || String.IsNullOrWhiteSpace(apellido) || String.IsNullOrWhiteSpace(direccion) || String.IsNullOrWhiteSpace(telefono) || String.IsNullOrWhiteSpace(correo))
-            {
-                error = true;
-                errorMsg = "Rellene todos los campos requeridos.";
-            }
+            if (cmbFechaDia.SelectedItem != null) fechaDia = cmbFechaDia.SelectedItem.ToString();
+            if (cmbFechaMes.SelectedItem != null) fechaMes = cmbFechaMes.SelectedItem.ToString();
 
             if (telefono.Length != 10)
             {
@@ -73,7 +70,7 @@ namespace JEWApp
             if (!String.IsNullOrWhiteSpace(fechaDia) && !String.IsNullOrWhiteSpace(fechaMes))
             {
                 fechaDiaInt = int.Parse(fechaDia);
-                fechaMesInt = cmbFechaMes.SelectedIndex + 2;
+                fechaMesInt = cmbFechaMes.SelectedIndex + 1;
             }
 
             if (!String.IsNullOrWhiteSpace(fechaAno))
@@ -88,6 +85,12 @@ namespace JEWApp
                     error = true;
                     errorMsg = "El año de nacimiento es inválido.";
                 }
+            }
+
+            if (String.IsNullOrWhiteSpace(doc) || String.IsNullOrWhiteSpace(nombre) || String.IsNullOrWhiteSpace(apellido) || String.IsNullOrWhiteSpace(direccion) || String.IsNullOrWhiteSpace(telefono) || String.IsNullOrWhiteSpace(correo))
+            {
+                error = true;
+                errorMsg = "Rellene todos los campos requeridos.";
             }
 
             if (error)
@@ -116,7 +119,7 @@ namespace JEWApp
 
                 if (i > 0)
                 {
-                    fo.MostrarLabelMsg(lblResultadoMsg, "Usuario creado exitosamente.");
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Cliente creado exitosamente.");
                 }
 
                 else

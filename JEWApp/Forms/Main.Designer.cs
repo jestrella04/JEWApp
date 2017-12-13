@@ -47,6 +47,7 @@
             this.btnFacturaLista = new System.Windows.Forms.ToolStripButton();
             this.tsSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnReporteComisiones = new System.Windows.Forms.ToolStripButton();
+            this.btnReporteCumpleanos = new System.Windows.Forms.ToolStripButton();
             this.tsSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSesionCerrar = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -76,6 +77,7 @@
             this.btnFacturaLista,
             this.tsSeparator5,
             this.btnReporteComisiones,
+            this.btnReporteCumpleanos,
             this.tsSeparator6,
             this.btnSesionCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -282,6 +284,20 @@
             this.btnReporteComisiones.ToolTipText = "Reporte de Comisiones";
             this.btnReporteComisiones.Click += new System.EventHandler(this.btnReporteComisiones_Click);
             // 
+            // btnReporteCumpleanos
+            // 
+            this.btnReporteCumpleanos.AutoSize = false;
+            this.btnReporteCumpleanos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReporteCumpleanos.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteCumpleanos.Image")));
+            this.btnReporteCumpleanos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReporteCumpleanos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReporteCumpleanos.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.btnReporteCumpleanos.Name = "btnReporteCumpleanos";
+            this.btnReporteCumpleanos.Size = new System.Drawing.Size(52, 52);
+            this.btnReporteCumpleanos.Text = "toolStripButton1";
+            this.btnReporteCumpleanos.ToolTipText = "Reporte de Cumpleaños";
+            this.btnReporteCumpleanos.Click += new System.EventHandler(this.btnReporteCumpleanos_Click);
+            // 
             // tsSeparator6
             // 
             this.tsSeparator6.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
@@ -362,9 +378,10 @@
         private System.Windows.Forms.ToolStripButton btnFacturaCrear;
         private System.Windows.Forms.ToolStripButton btnFacturaLista;
         private System.Windows.Forms.ToolStripSeparator tsSeparator5;
-        private System.Windows.Forms.ToolStripButton btnReporteComisiones;
+        private System.Windows.Forms.ToolStripButton btnReporteCumpleanos;
         private System.Windows.Forms.ToolStripSeparator tsSeparator6;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusBarLoginMessage;
+        private System.Windows.Forms.ToolStripButton btnReporteComisiones;
     }
 }

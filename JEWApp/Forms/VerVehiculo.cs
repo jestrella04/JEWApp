@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JEWApp
+namespace JEWApp.Forms
 {
-    public partial class VerUsuarios : Form
+    public partial class VerVehiculo : Form
     {
-        public VerUsuarios()
+        public VerVehiculo()
         {
             InitializeComponent();
         }
