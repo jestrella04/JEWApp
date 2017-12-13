@@ -12,9 +12,15 @@ namespace JEWApp
 {
     public partial class CrearRol : Form
     {
+        private StoredProcedure sp;
+        private FormOperations fo;
+
         public CrearRol()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
     }
 }

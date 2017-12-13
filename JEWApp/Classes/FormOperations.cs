@@ -12,11 +12,26 @@ namespace JEWApp
 {
     public class FormOperations
     {
-        public void LimpiarForm(Control.ControlCollection ctrl)
+        private Form formOps;
+
+        public FormOperations(Form theForm)
         {
-            foreach (Control c in ctrl)
+            formOps = theForm;
+        }
+
+        public void LimpiarForm()
+        {
+            foreach (Control c in formOps.Controls)
             {
                 if (c is TextBox) c.Text = "";
+
+                if (c is GroupBox)
+                {
+                    foreach (Control gb in c.Controls)
+                    {
+                        if (gb is TextBox) gb.Text = "";
+                    }
+                }
             }
         }
 

@@ -12,12 +12,15 @@ namespace JEWApp
 {
     public partial class CrearUsuario : Form
     {
-        private StoredProcedure sp = new StoredProcedure();
-        private FormOperations fo = new FormOperations();
+        private StoredProcedure sp;
+        private FormOperations fo;
 
         public CrearUsuario()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
 
         private void CrearUsuario_Load(object sender, EventArgs e)
@@ -85,6 +88,7 @@ namespace JEWApp
                 if (i > 0)
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Usuario creado exitosamente.");
+                    fo.LimpiarForm();
                 }
 
                 else
@@ -96,13 +100,14 @@ namespace JEWApp
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-            fo.LimpiarForm(this.Controls);
+            fo.LimpiarForm();
+            lblResultadoMsg.Visible = false;
             cmbRol.Focus();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            fo.LimpiarForm(this.Controls);
+            fo.LimpiarForm();
             this.Close();
         }
     }

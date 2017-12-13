@@ -604,15 +604,15 @@ namespace JEWApp
             return dt;
         }
 
-        public DataTable SelectVehiculoModelo(int modeloId = 0)
+        public DataTable SelectVehiculoModelo(int marcaId = 0)
         {
             string storedProcedureName = "sp_select_vehiculo_modelo";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-            if (0 != modeloId)
+            if (0 != marcaId)
             {
-                da.SelectCommand.Parameters.Add("@ClienteId", SqlDbType.Int).Value = modeloId;
+                da.SelectCommand.Parameters.Add("@MarcaId", SqlDbType.Int).Value = marcaId;
             }
 
             DataTable dt = new DataTable();

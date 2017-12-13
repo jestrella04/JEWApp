@@ -12,12 +12,15 @@ namespace JEWApp
 {
     public partial class CrearCliente : Form
     {
-        private StoredProcedure sp = new StoredProcedure();
-        private FormOperations fo = new FormOperations();
+        private StoredProcedure sp;
+        private FormOperations fo;
 
         public CrearCliente()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
 
         private void CrearCliente_Load(object sender, EventArgs e)
@@ -120,6 +123,7 @@ namespace JEWApp
                 if (i > 0)
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Cliente creado exitosamente.");
+                    fo.LimpiarForm();
                 }
 
                 else
@@ -131,13 +135,14 @@ namespace JEWApp
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            fo.LimpiarForm(this.Controls);
+            fo.LimpiarForm();
+            lblResultadoMsg.Visible = false;
             cmbTipo.Focus();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            fo.LimpiarForm(this.Controls);
+            fo.LimpiarForm();
             this.Close();
         }
     }

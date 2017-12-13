@@ -12,12 +12,15 @@ namespace JEWApp.Forms
 {
     public partial class VerProductoInventario : Form
     {
-        private StoredProcedure sp = new StoredProcedure();
-        private FormOperations fo = new FormOperations();
+        private StoredProcedure sp;
+        private FormOperations fo;
 
         public VerProductoInventario()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
 
         private void VerProductoInventario_Load(object sender, EventArgs e)

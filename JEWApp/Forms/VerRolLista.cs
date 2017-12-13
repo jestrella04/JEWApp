@@ -12,12 +12,15 @@ namespace JEWApp
 {
     public partial class VerRol : Form
     {
-        private StoredProcedure sp = new StoredProcedure();
-        private FormOperations fo = new FormOperations();
+        private StoredProcedure sp;
+        private FormOperations fo;
 
         public VerRol()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
 
         private void VerRol_Load(object sender, EventArgs e)

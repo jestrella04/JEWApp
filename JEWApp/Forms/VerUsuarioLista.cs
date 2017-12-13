@@ -12,12 +12,15 @@ namespace JEWApp
 {
     public partial class VerUsuarios : Form
     {
-        private StoredProcedure sp = new StoredProcedure();
-        private FormOperations fo = new FormOperations();
+        private StoredProcedure sp;
+        private FormOperations fo;
 
         public VerUsuarios()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
 
         private void VerUsuarios_Load(object sender, EventArgs e)

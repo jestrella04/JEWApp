@@ -12,9 +12,15 @@ namespace JEWApp.Forms
 {
     public partial class VerVehiculoLista : Form
     {
+        private StoredProcedure sp;
+        private FormOperations fo;
+
         public VerVehiculoLista()
         {
             InitializeComponent();
+
+            sp = new StoredProcedure();
+            fo = new FormOperations(this);
         }
     }
 }
