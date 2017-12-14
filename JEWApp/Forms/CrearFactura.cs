@@ -85,7 +85,7 @@ namespace JEWApp.Forms
 
                 if (insertedFacturaId > 0 && !detalleError)
                 {
-                    fo.MostrarLabelMsg(lblResultadoMsg, "Cliente creado exitosamente.");
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Factura creada exitosamente.");
                     fo.LimpiarForm();
                 }
 
@@ -147,6 +147,9 @@ namespace JEWApp.Forms
                 {
                     dgvFacturaDetalle.Rows.Add(productoId, prodNombre, 0, cantidad, precio);
                 }
+
+                txtFacturaDetalleCantidad.Text = "";
+                txtFacturaDetallePrecio.Text = "";
             }
             
             else

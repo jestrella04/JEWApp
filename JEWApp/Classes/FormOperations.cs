@@ -42,6 +42,13 @@ namespace JEWApp
             cmb.DisplayMember = "nombre";
         }
 
+        public void LlenarCheckedListBox(CheckedListBox box, DataTable dt)
+        {
+            box.DataSource = dt;
+            box.ValueMember = "id";
+            box.DisplayMember = "nombre";
+        }
+
         public void MostrarLabelMsg(Label label, string msg, bool error = false)
         {
             label.Text = msg;
