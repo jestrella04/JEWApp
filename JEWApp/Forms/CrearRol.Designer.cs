@@ -39,9 +39,9 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCrearRol = new System.Windows.Forms.GroupBox();
-            this.lblResultadoMsg = new System.Windows.Forms.Label();
-            this.clbRolPermisos = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.clbRolPermisos = new System.Windows.Forms.CheckedListBox();
+            this.lblResultadoMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCrearRol.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             // 
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.Location = new System.Drawing.Point(236, 422);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(90, 49);
             this.btnCrear.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(331, 422);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(90, 49);
             this.btnLimpiar.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(425, 422);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 49);
             this.btnCancelar.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(236, 41);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(280, 26);
             this.txtNombre.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(236, 81);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(280, 82);
@@ -161,26 +161,6 @@
             this.gbCrearRol.TabIndex = 11;
             this.gbCrearRol.TabStop = false;
             // 
-            // lblResultadoMsg
-            // 
-            this.lblResultadoMsg.AutoSize = true;
-            this.lblResultadoMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultadoMsg.Location = new System.Drawing.Point(337, 43);
-            this.lblResultadoMsg.Name = "lblResultadoMsg";
-            this.lblResultadoMsg.Size = new System.Drawing.Size(177, 20);
-            this.lblResultadoMsg.TabIndex = 39;
-            this.lblResultadoMsg.Text = "Aquí va la respuesta.";
-            this.lblResultadoMsg.Visible = false;
-            // 
-            // clbRolPermisos
-            // 
-            this.clbRolPermisos.FormattingEnabled = true;
-            this.clbRolPermisos.Location = new System.Drawing.Point(236, 180);
-            this.clbRolPermisos.MultiColumn = true;
-            this.clbRolPermisos.Name = "clbRolPermisos";
-            this.clbRolPermisos.Size = new System.Drawing.Size(280, 214);
-            this.clbRolPermisos.TabIndex = 9;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -192,6 +172,27 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Permisos:";
             // 
+            // clbRolPermisos
+            // 
+            this.clbRolPermisos.CheckOnClick = true;
+            this.clbRolPermisos.FormattingEnabled = true;
+            this.clbRolPermisos.Location = new System.Drawing.Point(236, 180);
+            this.clbRolPermisos.MultiColumn = true;
+            this.clbRolPermisos.Name = "clbRolPermisos";
+            this.clbRolPermisos.Size = new System.Drawing.Size(280, 214);
+            this.clbRolPermisos.TabIndex = 9;
+            // 
+            // lblResultadoMsg
+            // 
+            this.lblResultadoMsg.AutoSize = true;
+            this.lblResultadoMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoMsg.Location = new System.Drawing.Point(337, 43);
+            this.lblResultadoMsg.Name = "lblResultadoMsg";
+            this.lblResultadoMsg.Size = new System.Drawing.Size(177, 20);
+            this.lblResultadoMsg.TabIndex = 39;
+            this.lblResultadoMsg.Text = "Aquí va la respuesta.";
+            this.lblResultadoMsg.Visible = false;
+            // 
             // CrearRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,7 +203,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearRol";
             this.Text = "CrearRol";
             this.Load += new System.EventHandler(this.CrearRol_Load);

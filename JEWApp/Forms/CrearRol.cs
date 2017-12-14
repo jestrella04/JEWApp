@@ -68,7 +68,6 @@ namespace JEWApp
                         if (i == 0)
                         {
                             errorPermisos = true;
-                            //errorMsg = "Rol creado, pero ocurrio un error al guardar los permisos.";
                         }
 
                         cb++;
@@ -79,22 +78,14 @@ namespace JEWApp
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Rol creado exitosamente.");
                     fo.LimpiarForm();
-
-                    foreach (int i in clbRolPermisos.CheckedIndices)
-                    {
-                        clbRolPermisos.SetItemCheckState(i, CheckState.Unchecked);
-                    }
+                    fo.LimpiarCheckedListBox(clbRolPermisos);
                 }
 
                 else if (insertedRolId > 0 && errorPermisos)
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Rol creado, pero hubo errores almacenando los permisos.", error = true);
                     fo.LimpiarForm();
-
-                    foreach (int i in clbRolPermisos.CheckedIndices)
-                    {
-                        clbRolPermisos.SetItemCheckState(i, CheckState.Unchecked);
-                    }
+                    fo.LimpiarCheckedListBox(clbRolPermisos);
                 }
 
                 else
@@ -107,12 +98,7 @@ namespace JEWApp
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             fo.LimpiarForm();
-
-            foreach (int i in clbRolPermisos.CheckedIndices)
-            {
-                clbRolPermisos.SetItemCheckState(i, CheckState.Unchecked);
-            }
-
+            fo.LimpiarCheckedListBox(clbRolPermisos);
             lblResultadoMsg.Visible = false;
             txtNombre.Focus();
         }
@@ -120,12 +106,7 @@ namespace JEWApp
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             fo.LimpiarForm();
-
-            foreach (int i in clbRolPermisos.CheckedIndices)
-            {
-                clbRolPermisos.SetItemCheckState(i, CheckState.Unchecked);
-            }
-
+            fo.LimpiarCheckedListBox(clbRolPermisos);
             this.Close();
         }
     }

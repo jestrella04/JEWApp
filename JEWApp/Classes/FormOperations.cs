@@ -35,6 +35,14 @@ namespace JEWApp
             }
         }
 
+        public void LimpiarCheckedListBox(CheckedListBox box)
+        {
+            foreach (int i in box.CheckedIndices)
+            {
+                box.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        }
+
         public void LlenarCombo(ComboBox cmb, DataTable dt)
         {
             cmb.DataSource = dt;
