@@ -30,15 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerProductoInventario));
             this.dgvProductoInventario = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbInventarioProducto = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtInventarioCantidadDisponible = new System.Windows.Forms.TextBox();
+            this.txtInventarioCantidadMinima = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAgregarInventario = new System.Windows.Forms.Button();
+            this.txtInventarioPrecio = new System.Windows.Forms.TextBox();
+            this.lblResultadoMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvProductoInventario
@@ -57,8 +69,42 @@
             this.dgvProductoInventario.Name = "dgvProductoInventario";
             this.dgvProductoInventario.ReadOnly = true;
             this.dgvProductoInventario.RowTemplate.Height = 24;
-            this.dgvProductoInventario.Size = new System.Drawing.Size(1018, 427);
+            this.dgvProductoInventario.Size = new System.Drawing.Size(1018, 408);
             this.dgvProductoInventario.TabIndex = 5;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID Producto";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre Producto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 130;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cantidad Disponible";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cantidad Mínima";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // label1
             // 
@@ -81,41 +127,132 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Column1
+            // cmbInventarioProducto
             // 
-            this.Column1.HeaderText = "ID Producto";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.cmbInventarioProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInventarioProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbInventarioProducto.FormattingEnabled = true;
+            this.cmbInventarioProducto.Location = new System.Drawing.Point(19, 50);
+            this.cmbInventarioProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbInventarioProducto.Name = "cmbInventarioProducto";
+            this.cmbInventarioProducto.Size = new System.Drawing.Size(200, 28);
+            this.cmbInventarioProducto.TabIndex = 10;
+            this.cmbInventarioProducto.SelectionChangeCommitted += new System.EventHandler(this.cmbInventarioProducto_SelectionChangeCommitted);
             // 
-            // Column2
+            // label2
             // 
-            this.Column2.HeaderText = "Nombre Producto";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Producto:";
             // 
-            // Column3
+            // txtInventarioCantidadDisponible
             // 
-            this.Column3.HeaderText = "Cantidad Disponible";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.txtInventarioCantidadDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInventarioCantidadDisponible.Location = new System.Drawing.Point(241, 52);
+            this.txtInventarioCantidadDisponible.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInventarioCantidadDisponible.Name = "txtInventarioCantidadDisponible";
+            this.txtInventarioCantidadDisponible.Size = new System.Drawing.Size(200, 26);
+            this.txtInventarioCantidadDisponible.TabIndex = 28;
             // 
-            // Column4
+            // txtInventarioCantidadMinima
             // 
-            this.Column4.HeaderText = "Cantidad Mínima";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.txtInventarioCantidadMinima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInventarioCantidadMinima.Location = new System.Drawing.Point(463, 52);
+            this.txtInventarioCantidadMinima.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInventarioCantidadMinima.Name = "txtInventarioCantidadMinima";
+            this.txtInventarioCantidadMinima.Size = new System.Drawing.Size(200, 26);
+            this.txtInventarioCantidadMinima.TabIndex = 29;
             // 
-            // Column5
+            // groupBox1
             // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnAgregarInventario);
+            this.groupBox1.Controls.Add(this.txtInventarioPrecio);
+            this.groupBox1.Controls.Add(this.cmbInventarioProducto);
+            this.groupBox1.Controls.Add(this.txtInventarioCantidadMinima);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtInventarioCantidadDisponible);
+            this.groupBox1.Location = new System.Drawing.Point(9, 519);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1018, 96);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Insertar o Actualizar";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(682, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 16);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Precio:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(460, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 16);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Cantidad mínima:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(238, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Cantidad disponible:";
+            // 
+            // btnAgregarInventario
+            // 
+            this.btnAgregarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarInventario.Location = new System.Drawing.Point(907, 51);
+            this.btnAgregarInventario.Name = "btnAgregarInventario";
+            this.btnAgregarInventario.Size = new System.Drawing.Size(90, 27);
+            this.btnAgregarInventario.TabIndex = 31;
+            this.btnAgregarInventario.Text = "Actualizar";
+            this.btnAgregarInventario.UseVisualStyleBackColor = true;
+            this.btnAgregarInventario.Click += new System.EventHandler(this.btnAgregarInventario_Click);
+            // 
+            // txtInventarioPrecio
+            // 
+            this.txtInventarioPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInventarioPrecio.Location = new System.Drawing.Point(685, 52);
+            this.txtInventarioPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInventarioPrecio.Name = "txtInventarioPrecio";
+            this.txtInventarioPrecio.Size = new System.Drawing.Size(200, 26);
+            this.txtInventarioPrecio.TabIndex = 30;
+            // 
+            // lblResultadoMsg
+            // 
+            this.lblResultadoMsg.AutoSize = true;
+            this.lblResultadoMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoMsg.Location = new System.Drawing.Point(468, 49);
+            this.lblResultadoMsg.Name = "lblResultadoMsg";
+            this.lblResultadoMsg.Size = new System.Drawing.Size(177, 20);
+            this.lblResultadoMsg.TabIndex = 40;
+            this.lblResultadoMsg.Text = "Aquí va la respuesta.";
+            this.lblResultadoMsg.Visible = false;
             // 
             // VerProductoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 573);
+            this.ClientSize = new System.Drawing.Size(1050, 630);
+            this.Controls.Add(this.lblResultadoMsg);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvProductoInventario);
             this.Controls.Add(this.label1);
@@ -125,6 +262,8 @@
             this.Load += new System.EventHandler(this.VerProductoInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +279,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ComboBox cmbInventarioProducto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtInventarioCantidadDisponible;
+        private System.Windows.Forms.TextBox txtInventarioCantidadMinima;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAgregarInventario;
+        private System.Windows.Forms.TextBox txtInventarioPrecio;
+        private System.Windows.Forms.Label lblResultadoMsg;
     }
 }

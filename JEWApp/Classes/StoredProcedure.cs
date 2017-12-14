@@ -151,7 +151,9 @@ namespace JEWApp
 
             cmd.Parameters.Add("@FacturaId", SqlDbType.Int).Value = facturaId;
             cmd.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
-            cmd.Parameters.Add("@VehiculoId", SqlDbType.Int).Value = vehiculoId;
+
+            if (vehiculoId != 0) cmd.Parameters.Add("@VehiculoId", SqlDbType.Int).Value = vehiculoId;
+
             cmd.Parameters.Add("@EmpleadoId", SqlDbType.Int).Value = empleadoId;
             cmd.Parameters.Add("@Cantidad", SqlDbType.Decimal).Value = cantidad;
             cmd.Parameters.Add("@Precio", SqlDbType.Decimal).Value = precio;
@@ -218,7 +220,7 @@ namespace JEWApp
             cmd.Parameters.Add("@CategoriaId", SqlDbType.Int).Value = categoriaId;
             cmd.Parameters.Add("@MedidaId", SqlDbType.Int).Value = medidaId;
             cmd.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50).Value = nombreProducto;
-            cmd.Parameters.Add("@DesctProducto", SqlDbType.NVarChar, 255).Value = descrProducto;
+            cmd.Parameters.Add("@DescrProducto", SqlDbType.NVarChar, 255).Value = descrProducto;
 
             db.conectar();
 
@@ -437,11 +439,16 @@ namespace JEWApp
             return dt;
         }
 
-        public DataTable SelectInventario()
+        public DataTable SelectInventario(int productoId = 0)
         {
             string storedProcedureName = "sp_select_inventario";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            if (0 != productoId)
+            {
+                da.SelectCommand.Parameters.Add("@ProductoId", SqlDbType.Int).Value = productoId;
+            }
 
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -604,15 +611,15 @@ namespace JEWApp
             return dt;
         }
 
-        public DataTable SelectVehiculoModelo(int marcaId = 0)
+        public DataTable SelectVehiculoModelo(int modeloId = 0)
         {
             string storedProcedureName = "sp_select_vehiculo_modelo";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-            if (0 != marcaId)
+            if (0 != modeloId)
             {
-                da.SelectCommand.Parameters.Add("@MarcaId", SqlDbType.Int).Value = marcaId;
+                da.SelectCommand.Parameters.Add("@ModeloId", SqlDbType.Int).Value = modeloId;
             }
 
             DataTable dt = new DataTable();

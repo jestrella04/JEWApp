@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerProductoLista));
             this.dgvProductoLista = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,23 +53,12 @@
             this.Column4,
             this.Column5});
             this.dgvProductoLista.Location = new System.Drawing.Point(9, 93);
-            this.dgvProductoLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductoLista.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductoLista.Name = "dgvProductoLista";
             this.dgvProductoLista.ReadOnly = true;
             this.dgvProductoLista.RowTemplate.Height = 24;
             this.dgvProductoLista.Size = new System.Drawing.Size(1018, 427);
             this.dgvProductoLista.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Listado de Productos";
             // 
             // Column1
             // 
@@ -101,6 +90,17 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(90, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Listado de Productos";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -119,7 +119,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvProductoLista);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VerProductoLista";
             this.Text = "VerProductos";
             this.Load += new System.EventHandler(this.VerProductoLista_Load);

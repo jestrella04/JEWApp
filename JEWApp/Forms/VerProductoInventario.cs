@@ -25,11 +25,73 @@ namespace JEWApp.Forms
 
         private void VerProductoInventario_Load(object sender, EventArgs e)
         {
-            DataTable dt = sp.SelectInventario();
+            DataTable inventarioLista = sp.SelectInventario();
+            DataTable productoLista = sp.SelectProducto();
 
-            foreach (DataRow row in dt.Rows)
+            fo.LlenarCombo(cmbInventarioProducto, productoLista);
+
+            foreach (DataRow row in inventarioLista.Rows)
             {
                 dgvProductoInventario.Rows.Add(row["id_producto"].ToString(), row["nombre_producto"].ToString(), row["cantidad_disponible"].ToString(), row["cantidad_minima"].ToString(), row["precio"].ToString());
+            }
+        }
+
+        private void btnAgregarInventario_Click(object sender, EventArgs e)
+        {
+            bool error = false;
+            string errorMsg = "";
+
+            int productoId = int.Parse(cmbInventarioProducto.SelectedValue.ToString());
+
+            double cantidadDisponible = 0;
+            double cantidadMinima = 0;
+            double precio = 0;
+
+            if (!double.TryParse(txtInventarioCantidadDisponible.Text, out cantidadDisponible) || !double.TryParse(txtInventarioCantidadMinima.Text, out cantidadMinima) || !double.TryParse(txtInventarioPrecio.Text, out precio))
+            {
+                error = true;
+                errorMsg = "Rellene los campos con valores válidos.";
+            }
+
+            if (error)
+            {
+                fo.MostrarLabelMsg(lblResultadoMsg, errorMsg, error = true);
+            }
+
+            else
+            {
+                int i = sp.InsertProductoInventario(productoId, cantidadDisponible, cantidadMinima, precio);
+
+                if (i > 0)
+                {
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Inventario actualizado exitosamente.");
+                    fo.LimpiarForm();
+                }
+
+                else
+                {
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Ocurrió un error actualizando el inventario. Intente nuevamente.", error = true);
+                }
+            }
+        }
+
+        private void cmbInventarioProducto_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int productoId = int.Parse(cmbInventarioProducto.SelectedValue.ToString());
+
+            DataTable producto = sp.SelectInventario(productoId);
+
+            int contador = producto.Rows.Count;
+
+            if (contador > 0)
+            {
+                string cantidadDisponible = producto.Rows[0]["cantidad_disponible"].ToString();
+                string cantidadMinima = producto.Rows[0]["cantidad_minima"].ToString();
+                string precio = producto.Rows[0]["precio"].ToString();
+
+                if (!String.IsNullOrWhiteSpace(cantidadDisponible)) txtInventarioCantidadDisponible.Text = cantidadDisponible;
+                if (!String.IsNullOrWhiteSpace(cantidadMinima)) txtInventarioCantidadMinima.Text = cantidadMinima;
+                if (!String.IsNullOrWhiteSpace(precio)) txtInventarioPrecio.Text = precio;
             }
         }
     }

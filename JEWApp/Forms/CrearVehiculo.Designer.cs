@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearVehiculo));
             this.gbCrearProducto = new System.Windows.Forms.GroupBox();
+            this.txtVehiculoAno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtVehiculoMatricula = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblResultadoMsg = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtVehiculoAno = new System.Windows.Forms.TextBox();
             this.gbCrearProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,11 +69,21 @@
             this.gbCrearProducto.Controls.Add(this.btnCrear);
             this.gbCrearProducto.Controls.Add(this.btnLimpiar);
             this.gbCrearProducto.Controls.Add(this.btnCancelar);
-            this.gbCrearProducto.Location = new System.Drawing.Point(10, 81);
+            this.gbCrearProducto.Location = new System.Drawing.Point(11, 104);
             this.gbCrearProducto.Name = "gbCrearProducto";
-            this.gbCrearProducto.Size = new System.Drawing.Size(1016, 436);
+            this.gbCrearProducto.Size = new System.Drawing.Size(664, 436);
             this.gbCrearProducto.TabIndex = 15;
             this.gbCrearProducto.TabStop = false;
+            // 
+            // txtVehiculoAno
+            // 
+            this.txtVehiculoAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVehiculoAno.Location = new System.Drawing.Point(216, 151);
+            this.txtVehiculoAno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVehiculoAno.Multiline = true;
+            this.txtVehiculoAno.Name = "txtVehiculoAno";
+            this.txtVehiculoAno.Size = new System.Drawing.Size(280, 25);
+            this.txtVehiculoAno.TabIndex = 18;
             // 
             // label7
             // 
@@ -88,8 +98,9 @@
             // 
             // txtVehiculoMatricula
             // 
+            this.txtVehiculoMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVehiculoMatricula.Location = new System.Drawing.Point(217, 189);
-            this.txtVehiculoMatricula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVehiculoMatricula.Margin = new System.Windows.Forms.Padding(2);
             this.txtVehiculoMatricula.Multiline = true;
             this.txtVehiculoMatricula.Name = "txtVehiculoMatricula";
             this.txtVehiculoMatricula.Size = new System.Drawing.Size(280, 25);
@@ -112,7 +123,7 @@
             this.cmbVehiculoModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVehiculoModelo.FormattingEnabled = true;
             this.cmbVehiculoModelo.Location = new System.Drawing.Point(217, 108);
-            this.cmbVehiculoModelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbVehiculoModelo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVehiculoModelo.Name = "cmbVehiculoModelo";
             this.cmbVehiculoModelo.Size = new System.Drawing.Size(280, 28);
             this.cmbVehiculoModelo.TabIndex = 13;
@@ -121,7 +132,7 @@
             // 
             this.txtvehiculoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtvehiculoDescripcion.Location = new System.Drawing.Point(217, 230);
-            this.txtvehiculoDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtvehiculoDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtvehiculoDescripcion.Multiline = true;
             this.txtvehiculoDescripcion.Name = "txtvehiculoDescripcion";
             this.txtvehiculoDescripcion.Size = new System.Drawing.Size(280, 98);
@@ -144,11 +155,11 @@
             this.cmbVehiculoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVehiculoMarca.FormattingEnabled = true;
             this.cmbVehiculoMarca.Location = new System.Drawing.Point(217, 67);
-            this.cmbVehiculoMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbVehiculoMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVehiculoMarca.Name = "cmbVehiculoMarca";
             this.cmbVehiculoMarca.Size = new System.Drawing.Size(280, 28);
             this.cmbVehiculoMarca.TabIndex = 10;
-            this.cmbVehiculoMarca.SelectedIndexChanged += new System.EventHandler(this.cmbVehiculoMarca_SelectedIndexChanged);
+            this.cmbVehiculoMarca.SelectionChangeCommitted += new System.EventHandler(this.cmbVehiculoMarca_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -178,7 +189,7 @@
             this.cmbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(217, 27);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(280, 28);
             this.cmbCliente.TabIndex = 9;
@@ -198,7 +209,7 @@
             // 
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.Location = new System.Drawing.Point(217, 352);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(90, 49);
             this.btnCrear.TabIndex = 4;
@@ -210,7 +221,7 @@
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(312, 352);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(90, 49);
             this.btnLimpiar.TabIndex = 5;
@@ -222,7 +233,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(406, 352);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 49);
             this.btnCancelar.TabIndex = 6;
@@ -245,7 +256,7 @@
             // 
             this.lblResultadoMsg.AutoSize = true;
             this.lblResultadoMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultadoMsg.Location = new System.Drawing.Point(337, 43);
+            this.lblResultadoMsg.Location = new System.Drawing.Point(92, 72);
             this.lblResultadoMsg.Name = "lblResultadoMsg";
             this.lblResultadoMsg.Size = new System.Drawing.Size(177, 20);
             this.lblResultadoMsg.TabIndex = 40;
@@ -262,25 +273,17 @@
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
-            // txtVehiculoAno
-            // 
-            this.txtVehiculoAno.Location = new System.Drawing.Point(216, 151);
-            this.txtVehiculoAno.Margin = new System.Windows.Forms.Padding(2);
-            this.txtVehiculoAno.Multiline = true;
-            this.txtVehiculoAno.Name = "txtVehiculoAno";
-            this.txtVehiculoAno.Size = new System.Drawing.Size(280, 25);
-            this.txtVehiculoAno.TabIndex = 18;
-            // 
             // CrearVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 560);
+            this.ClientSize = new System.Drawing.Size(687, 572);
             this.Controls.Add(this.lblResultadoMsg);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbCrearProducto);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearVehiculo";
             this.Text = "CrearVehiculo";
             this.Load += new System.EventHandler(this.CrearVehiculo_Load);

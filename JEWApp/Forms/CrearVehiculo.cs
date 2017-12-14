@@ -38,19 +38,23 @@ namespace JEWApp.Forms
             string errorMsg = "";
 
             int clienteId = int.Parse(cmbCliente.SelectedValue.ToString());
-            int vehiculoMarcaId = int.Parse(cmbVehiculoMarca.SelectedValue.ToString());
-            int vehiculoModeloId = int.Parse(cmbVehiculoModelo.SelectedValue.ToString());
+
+            int vehiculoMarcaId = 0;
+            int vehiculoModeloId = 0;
             int vehiculoAno = 0;
+
+            if (cmbVehiculoMarca.Items.Count > 0) vehiculoMarcaId = int.Parse(cmbVehiculoMarca.SelectedValue.ToString());
+            if (cmbVehiculoModelo.Items.Count > 0) vehiculoModeloId = int.Parse(cmbVehiculoModelo.SelectedValue.ToString());
+
+            int.TryParse(txtVehiculoAno.Text, out vehiculoAno);
 
             string vehiculoMatricula = txtVehiculoMatricula.Text;
             string vehiculoDescripcion = txtvehiculoDescripcion.Text;
 
-            int.TryParse(txtVehiculoAno.Text, out vehiculoAno);
-
-            if (vehiculoAno == 0)
+            if (vehiculoAno == 0 || vehiculoMarcaId == 0 || vehiculoModeloId == 0)
             {
                 error = true;
-                errorMsg = "El año es inválido.";
+                errorMsg = "Rellene los campos correctamente.";
             }
 
             if (String.IsNullOrWhiteSpace(vehiculoMatricula) || String.IsNullOrWhiteSpace(vehiculoDescripcion))
@@ -94,12 +98,15 @@ namespace JEWApp.Forms
             this.Close();
         }
 
-        private void cmbVehiculoMarca_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbVehiculoMarca_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int marcaId = int.Parse(cmbVehiculoMarca.SelectedValue.ToString());
-            DataTable vehiculoModeloLista = sp.SelectVehiculoModelo(marcaId);
+            DataTable vehiculoModeloLista = sp.SelectVehiculoModelo();
+            DataView dv = new DataView(vehiculoModeloLista);
 
-            fo.LlenarCombo(cmbVehiculoModelo, vehiculoModeloLista);
+            dv.RowFilter = "id_marca = " + cmbVehiculoMarca.SelectedValue.ToString();
+            var filter = dv.ToTable();
+
+            fo.LlenarCombo(cmbVehiculoModelo, filter);
         }
     }
 }

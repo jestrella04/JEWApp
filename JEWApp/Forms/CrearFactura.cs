@@ -35,6 +35,7 @@ namespace JEWApp.Forms
         private void btnCrear_Click(object sender, EventArgs e)
         {
             bool error = false;
+            bool detalleError = false;
             string errorMsg = "";
 
             int clienteId = int.Parse(cmbCliente.SelectedValue.ToString());
@@ -51,7 +52,7 @@ namespace JEWApp.Forms
             if (String.IsNullOrWhiteSpace(facturaDescripcion))
             {
                 error = true;
-                errorMsg = "Rellene todos los campos requeridos";
+                errorMsg = "Rellene todos los campos requeridos.";
             }
 
             if (error)
@@ -61,16 +62,42 @@ namespace JEWApp.Forms
 
             else
             {
-                int i = sp.InsertFactura(clienteId, 1, facturaDescripcion);
+                int insertedFacturaId = sp.InsertFactura(clienteId, 1, facturaDescripcion);
 
-                if (i > 0)
+                if (insertedFacturaId > 0)
                 {
-                    bool detalleError = false;
-
-                    foreach(var c in dgvFacturaDetalle.Rows)
+                    foreach(DataGridViewRow row in dgvFacturaDetalle.Rows)
                     {
-                        //int j = sp.InsertFacturaDetalle(i,c[""])
+                        int prodId = int.Parse(row.Cells[0].Value.ToString());
+                        int vehiculoId = int.Parse(row.Cells[2].Value.ToString());
+                        int empleadoId = Session.empleadoId;
+                        double cantidad = double.Parse(row.Cells[0].Value.ToString());
+                        double precio = double.Parse(row.Cells[0].Value.ToString());
+
+                        int i = sp.InsertFacturaDetalle(insertedFacturaId, prodId, vehiculoId, empleadoId, cantidad, precio);
+
+                        if (i == 0)
+                        {
+                            detalleError = true;
+                        }
                     }
+                }
+
+                if (insertedFacturaId > 0 && !detalleError)
+                {
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Cliente creado exitosamente.");
+                    fo.LimpiarForm();
+                }
+
+                else if (insertedFacturaId > 0 && detalleError)
+                {
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Factura creada, pero hubo errores almacenando los detalles.", error = true);
+                    fo.LimpiarForm();
+                }
+
+                else
+                {
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Ocurrió un error al crear la factura. Intente nuevamente.", error = true);
                 }
             }
         }
@@ -78,7 +105,9 @@ namespace JEWApp.Forms
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             fo.LimpiarForm();
+            dgvFacturaDetalle.Rows.Clear();
             lblResultadoMsg.Visible = false;
+            lblfacturaDetalleMsg.Visible = false;
             cmbCliente.Focus();
         }
 
@@ -88,34 +117,19 @@ namespace JEWApp.Forms
             this.Close();
         }
 
-        private void cmbFacturaDetalleProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (int.Parse(cmbFacturaDetalleProducto.SelectedValue.ToString()) == 1)
-            {
-                DataTable vehiculoLista = sp.SelectVehiculo();
-                DataView dv = new DataView(vehiculoLista);
-
-                dv.RowFilter = "id_cliente = " + cmbCliente.SelectedValue.ToString();
-                var filter = dv.ToTable();
-
-                fo.LlenarCombo(cmbFacturaDetalleVehiculo, filter);
-                cmbFacturaDetalleVehiculo.Enabled = true;
-            }
-
-            else
-            {
-                cmbFacturaDetalleVehiculo.Enabled = false;
-            }
-        }
-
         private void btnFacturaDetalleAdd_Click(object sender, EventArgs e)
         {
             int productoId = int.Parse(cmbFacturaDetalleProducto.SelectedValue.ToString());
+
             int vehiculoId = 0;
             double cantidad = 0;
             double precio = 0;
 
-            int.TryParse(cmbFacturaDetalleVehiculo.SelectedValue.ToString(), out vehiculoId);
+            if (cmbFacturaDetalleVehiculo.Items.Count > 0)
+            {
+                int.TryParse(cmbFacturaDetalleVehiculo.SelectedValue.ToString(), out vehiculoId);
+            }            
+
             double.TryParse(txtFacturaDetalleCantidad.Text, out cantidad);
             double.TryParse(txtFacturaDetallePrecio.Text, out precio);
 
@@ -139,6 +153,49 @@ namespace JEWApp.Forms
             {
                 fo.MostrarLabelMsg(lblfacturaDetalleMsg, "Llene todos los campos.", true);
             }
+        }
+
+        private void cmbFacturaDetalleProducto_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int productoId = int.Parse(cmbFacturaDetalleProducto.SelectedValue.ToString());
+
+            DataTable inventario = sp.SelectInventario(productoId);
+
+            if (inventario.Rows.Count > 0)
+            {
+                txtFacturaDetallePrecio.Text = inventario.Rows[0]["precio"].ToString();
+            }
+
+            if (productoId == 1)
+            {
+                DataTable vehiculoLista = sp.SelectVehiculo();
+                DataView dv = new DataView(vehiculoLista);
+
+                dv.RowFilter = "id_cliente = " + cmbCliente.SelectedValue.ToString();
+                var filter = dv.ToTable();
+
+                fo.LlenarCombo(cmbFacturaDetalleVehiculo, filter);
+                cmbFacturaDetalleVehiculo.Enabled = true;
+                btnFacturaDetalleAgregarVehiculo.Enabled = true;
+            }
+
+            else
+            {
+                cmbFacturaDetalleVehiculo.Enabled = false;
+                btnFacturaDetalleAgregarVehiculo.Enabled = false;
+            }
+        }
+
+        private void btnFacturaDetalleAgregarVehiculo_Click(object sender, EventArgs e)
+        {
+            CrearVehiculo crearVehiculoForm = new CrearVehiculo();
+
+            crearVehiculoForm.MinimizeBox = false;
+            crearVehiculoForm.MaximizeBox = false;
+            crearVehiculoForm.ShowIcon = false;
+            crearVehiculoForm.StartPosition = FormStartPosition.CenterScreen;
+            crearVehiculoForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            crearVehiculoForm.Show();
         }
     }
 }

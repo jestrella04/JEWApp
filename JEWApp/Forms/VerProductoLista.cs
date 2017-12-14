@@ -29,7 +29,7 @@ namespace JEWApp.Forms
 
             foreach (DataRow row in dt.Rows)
             {
-                dgvProductoLista.Rows.Add(row["id"].ToString(), row["categoria"].ToString(), row["medida"].ToString(), row["nombre"].ToString(), row["descripcion"].ToString());
+                dgvProductoLista.Rows.Add(row["id"].ToString(), row["nombre_categoria"].ToString(), row["nombre_medida"].ToString(), row["nombre"].ToString(), row["descripcion"].ToString());
             }
         }
     }

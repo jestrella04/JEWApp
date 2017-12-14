@@ -39,6 +39,7 @@ namespace JEWApp
             childForm.MinimizeBox = false;
             childForm.MaximizeBox = false;
             childForm.WindowState = FormWindowState.Maximized;
+            childForm.ShowIcon = false;
             childForm.Show();
         }
 
@@ -65,9 +66,10 @@ namespace JEWApp
                 var permisoProductoCrear = Session.empleadoPermisos.Select("nombre_tarea = 'crear producto'");
                 var permisoProductoVer = Session.empleadoPermisos.Select("nombre_tarea = 'ver producto'");
                 var permisoProductoInventario = Session.empleadoPermisos.Select("nombre_tarea = 'inventario'");
-                var permisoFacturaCrear = Session.empleadoPermisos.Select("nombre_tarea = 'factura crear'");
+                var permisoFacturaCrear = Session.empleadoPermisos.Select("nombre_tarea = 'crear factura'");
                 var permisoFacturaVer = Session.empleadoPermisos.Select("nombre_tarea = 'ver factura'");
-                var permisoReporteComisiones = Session.empleadoPermisos.Select("nombre_tarea = 'reporte comisiones'");
+                var permisoReporteComisiones = Session.empleadoPermisos.Select("nombre_tarea = 'reporte de comisiones'");
+                var permisoReporteCumpleanos = Session.empleadoPermisos.Select("nombre_tarea = 'reporte de cumpleaños'");
 
                 if (permisoUsuarioCrear == null || permisoUsuarioCrear.Length == 0) btnUsuarioCrear.Visible = false;
                 if (permisoUsuarioVer == null || permisoUsuarioVer.Length == 0) btnUsuarioLista.Visible = false;
@@ -80,14 +82,15 @@ namespace JEWApp
                 if (permisoProductoInventario == null || permisoProductoInventario.Length == 0) btnProductoInventario.Visible = false;
                 if (permisoFacturaCrear == null || permisoFacturaCrear.Length == 0) btnFacturaCrear.Visible = false;
                 if (permisoFacturaVer == null || permisoFacturaVer.Length == 0) btnFacturaLista.Visible = false;
-                if (permisoReporteComisiones == null || permisoReporteComisiones.Length == 0) btnReporteCumpleanos.Visible = false;
+                if (permisoReporteComisiones == null || permisoReporteComisiones.Length == 0) btnReporteComisiones.Visible = false;
+                if (permisoReporteCumpleanos == null || permisoReporteCumpleanos.Length == 0) btnReporteCumpleanos.Visible = false;
 
                 if (!btnUsuarioCrear.Visible && !btnUsuarioLista.Visible) tsSeparator1.Visible = false;
                 if (!btnRolCrear.Visible && !btnRolLista.Visible) tsSeparator2.Visible = false;
                 if (!btnClienteCrear.Visible && !btnClienteLista.Visible) tsSeparator3.Visible = false;
                 if (!btnProductoCrear.Visible && !btnProductoLista.Visible && !btnProductoInventario.Visible) tsSeparator4.Visible = false;
                 if (!btnFacturaCrear.Visible && !btnFacturaLista.Visible) tsSeparator5.Visible = false;
-                if (!btnReporteCumpleanos.Visible /*&& !btnUsuarioLista.Visible*/) tsSeparator6.Visible = false;
+                if (!btnReporteComisiones.Visible && !btnReporteComisiones.Visible) tsSeparator6.Visible = false;
             }
         }
 
