@@ -77,6 +77,7 @@ namespace JEWApp
                 if (permisoRolVer == null || permisoRolVer.Length == 0) btnRolLista.Visible = false;
                 if (permisoClienteCrear == null || permisoClienteCrear.Length == 0) btnClienteCrear.Visible = false;
                 if (permisoClienteVer == null || permisoClienteVer.Length == 0) btnClienteLista.Visible = false;
+                if (permisoFacturaCrear == null || permisoFacturaCrear.Length == 0) btnVehiculoAgregar.Visible = false;
                 if (permisoProductoCrear == null || permisoProductoCrear.Length == 0) btnProductoCrear.Visible = false;
                 if (permisoProductoVer == null || permisoProductoVer.Length == 0) btnProductoLista.Visible = false;
                 if (permisoProductoInventario == null || permisoProductoInventario.Length == 0) btnProductoInventario.Visible = false;
@@ -149,6 +150,13 @@ namespace JEWApp
             VerCliente formClienteLista = new VerCliente();
 
             showChildForm(formClienteLista);
+        }
+
+        private void btnVehiculoAgregar_Click(object sender, EventArgs e)
+        {
+            CrearVehiculo formCrearVehiculo = new CrearVehiculo();
+
+            showChildForm(formCrearVehiculo);
         }
 
         private void btnProductoCrear_Click(object sender, EventArgs e)

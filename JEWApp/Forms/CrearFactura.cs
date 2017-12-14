@@ -87,12 +87,14 @@ namespace JEWApp.Forms
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Factura creada exitosamente.");
                     fo.LimpiarForm();
+                    dgvFacturaDetalle.Rows.Clear();
                 }
 
                 else if (insertedFacturaId > 0 && detalleError)
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Factura creada, pero hubo errores almacenando los detalles.", error = true);
                     fo.LimpiarForm();
+                    dgvFacturaDetalle.Rows.Clear();
                 }
 
                 else

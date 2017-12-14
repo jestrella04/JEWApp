@@ -52,6 +52,7 @@
             this.btnSesionCerrar = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatusBarLoginMessage = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnVehiculoAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,7 @@
             this.tsSeparator2,
             this.btnClienteCrear,
             this.btnClienteLista,
+            this.btnVehiculoAgregar,
             this.tsSeparator3,
             this.btnProductoCrear,
             this.btnProductoLista,
@@ -335,6 +337,20 @@
             this.lblStatusBarLoginMessage.Size = new System.Drawing.Size(118, 17);
             this.lblStatusBarLoginMessage.Text = "toolStripStatusLabel1";
             // 
+            // btnVehiculoAgregar
+            // 
+            this.btnVehiculoAgregar.AutoSize = false;
+            this.btnVehiculoAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVehiculoAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnVehiculoAgregar.Image")));
+            this.btnVehiculoAgregar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnVehiculoAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVehiculoAgregar.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.btnVehiculoAgregar.Name = "btnVehiculoAgregar";
+            this.btnVehiculoAgregar.Size = new System.Drawing.Size(52, 52);
+            this.btnVehiculoAgregar.Text = "toolStripButton1";
+            this.btnVehiculoAgregar.ToolTipText = "Agregar Vehículo";
+            this.btnVehiculoAgregar.Click += new System.EventHandler(this.btnVehiculoAgregar_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,5 +399,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusBarLoginMessage;
         private System.Windows.Forms.ToolStripButton btnReporteComisiones;
+        private System.Windows.Forms.ToolStripButton btnVehiculoAgregar;
     }
 }
