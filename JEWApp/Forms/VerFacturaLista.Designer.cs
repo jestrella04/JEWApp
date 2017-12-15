@@ -97,27 +97,28 @@
             this.Column2.HeaderText = "Cliente";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.Column2.Width = 180;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Estado";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Fecha Creación";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
+            this.Column4.Width = 150;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Fecha Actualización";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 145;
+            this.Column5.Width = 150;
             // 
             // Column6
             // 

@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearFactura));
             this.gbCrearProducto = new System.Windows.Forms.GroupBox();
+            this.txtNetoPagar = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCantidadProductos = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtFacturaDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +43,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFacturaDetalleAgregarVehiculo = new System.Windows.Forms.Button();
             this.lblfacturaDetalleMsg = new System.Windows.Forms.Label();
             this.btnFacturaDetalleAdd = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,19 +54,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbFacturaDetalleProducto = new System.Windows.Forms.ComboBox();
             this.dgvFacturaDetalle = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblResultadoMsg = new System.Windows.Forms.Label();
             this.colProdId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProdNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVehiculoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblResultadoMsg = new System.Windows.Forms.Label();
-            this.btnFacturaDetalleAgregarVehiculo = new System.Windows.Forms.Button();
-            this.txtCantidadProductos = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNetoPagar = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.gbCrearProducto.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturaDetalle)).BeginInit();
@@ -84,6 +84,48 @@
             this.gbCrearProducto.TabIndex = 15;
             this.gbCrearProducto.TabStop = false;
             this.gbCrearProducto.Text = "Cabecera";
+            // 
+            // txtNetoPagar
+            // 
+            this.txtNetoPagar.Enabled = false;
+            this.txtNetoPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNetoPagar.Location = new System.Drawing.Point(772, 61);
+            this.txtNetoPagar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNetoPagar.Name = "txtNetoPagar";
+            this.txtNetoPagar.Size = new System.Drawing.Size(142, 26);
+            this.txtNetoPagar.TabIndex = 34;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(633, 67);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 20);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Neto a pagar:";
+            // 
+            // txtCantidadProductos
+            // 
+            this.txtCantidadProductos.Enabled = false;
+            this.txtCantidadProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadProductos.Location = new System.Drawing.Point(772, 24);
+            this.txtCantidadProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidadProductos.Name = "txtCantidadProductos";
+            this.txtCantidadProductos.Size = new System.Drawing.Size(142, 26);
+            this.txtCantidadProductos.TabIndex = 32;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(587, 30);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Total de productos:";
             // 
             // txtFacturaDescripcion
             // 
@@ -195,6 +237,18 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
+            // 
+            // btnFacturaDetalleAgregarVehiculo
+            // 
+            this.btnFacturaDetalleAgregarVehiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFacturaDetalleAgregarVehiculo.BackgroundImage")));
+            this.btnFacturaDetalleAgregarVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFacturaDetalleAgregarVehiculo.Enabled = false;
+            this.btnFacturaDetalleAgregarVehiculo.Location = new System.Drawing.Point(471, 89);
+            this.btnFacturaDetalleAgregarVehiculo.Name = "btnFacturaDetalleAgregarVehiculo";
+            this.btnFacturaDetalleAgregarVehiculo.Size = new System.Drawing.Size(28, 28);
+            this.btnFacturaDetalleAgregarVehiculo.TabIndex = 40;
+            this.btnFacturaDetalleAgregarVehiculo.UseVisualStyleBackColor = true;
+            this.btnFacturaDetalleAgregarVehiculo.Click += new System.EventHandler(this.btnFacturaDetalleAgregarVehiculo_Click);
             // 
             // lblfacturaDetalleMsg
             // 
@@ -309,36 +363,6 @@
             this.dgvFacturaDetalle.Size = new System.Drawing.Size(466, 201);
             this.dgvFacturaDetalle.TabIndex = 0;
             // 
-            // colProdId
-            // 
-            this.colProdId.HeaderText = "Prod ID";
-            this.colProdId.Name = "colProdId";
-            this.colProdId.ReadOnly = true;
-            this.colProdId.Visible = false;
-            // 
-            // colProdNombre
-            // 
-            this.colProdNombre.HeaderText = "Producto";
-            this.colProdNombre.Name = "colProdNombre";
-            this.colProdNombre.ReadOnly = true;
-            // 
-            // colVehiculoId
-            // 
-            this.colVehiculoId.HeaderText = "Vehiculo ID";
-            this.colVehiculoId.Name = "colVehiculoId";
-            this.colVehiculoId.ReadOnly = true;
-            this.colVehiculoId.Visible = false;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -371,59 +395,36 @@
             this.lblResultadoMsg.Text = "Aquí va la respuesta.";
             this.lblResultadoMsg.Visible = false;
             // 
-            // btnFacturaDetalleAgregarVehiculo
+            // colProdId
             // 
-            this.btnFacturaDetalleAgregarVehiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFacturaDetalleAgregarVehiculo.BackgroundImage")));
-            this.btnFacturaDetalleAgregarVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFacturaDetalleAgregarVehiculo.Enabled = false;
-            this.btnFacturaDetalleAgregarVehiculo.Location = new System.Drawing.Point(471, 89);
-            this.btnFacturaDetalleAgregarVehiculo.Name = "btnFacturaDetalleAgregarVehiculo";
-            this.btnFacturaDetalleAgregarVehiculo.Size = new System.Drawing.Size(28, 28);
-            this.btnFacturaDetalleAgregarVehiculo.TabIndex = 40;
-            this.btnFacturaDetalleAgregarVehiculo.UseVisualStyleBackColor = true;
-            this.btnFacturaDetalleAgregarVehiculo.Click += new System.EventHandler(this.btnFacturaDetalleAgregarVehiculo_Click);
+            this.colProdId.HeaderText = "Prod ID";
+            this.colProdId.Name = "colProdId";
+            this.colProdId.ReadOnly = true;
+            this.colProdId.Visible = false;
             // 
-            // txtCantidadProductos
+            // colProdNombre
             // 
-            this.txtCantidadProductos.Enabled = false;
-            this.txtCantidadProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadProductos.Location = new System.Drawing.Point(772, 24);
-            this.txtCantidadProductos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCantidadProductos.Name = "txtCantidadProductos";
-            this.txtCantidadProductos.Size = new System.Drawing.Size(142, 26);
-            this.txtCantidadProductos.TabIndex = 32;
+            this.colProdNombre.HeaderText = "Producto";
+            this.colProdNombre.Name = "colProdNombre";
+            this.colProdNombre.ReadOnly = true;
+            this.colProdNombre.Width = 150;
             // 
-            // label4
+            // colVehiculoId
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(587, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Total de productos:";
+            this.colVehiculoId.HeaderText = "Vehiculo ID";
+            this.colVehiculoId.Name = "colVehiculoId";
+            this.colVehiculoId.ReadOnly = true;
+            this.colVehiculoId.Visible = false;
             // 
-            // txtNetoPagar
+            // colCantidad
             // 
-            this.txtNetoPagar.Enabled = false;
-            this.txtNetoPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNetoPagar.Location = new System.Drawing.Point(772, 61);
-            this.txtNetoPagar.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNetoPagar.Name = "txtNetoPagar";
-            this.txtNetoPagar.Size = new System.Drawing.Size(142, 26);
-            this.txtNetoPagar.TabIndex = 34;
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
             // 
-            // label9
+            // colPrecio
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(633, 67);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 20);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Neto a pagar:";
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
             // 
             // CrearFactura
             // 
@@ -476,11 +477,6 @@
         private System.Windows.Forms.TextBox txtFacturaDetalleCantidad;
         private System.Windows.Forms.TextBox txtFacturaDescripcion;
         private System.Windows.Forms.Button btnFacturaDetalleAdd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProdId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProdNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colVehiculoId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.Label lblfacturaDetalleMsg;
         private System.Windows.Forms.Label lblResultadoMsg;
         private System.Windows.Forms.Button btnFacturaDetalleAgregarVehiculo;
@@ -488,5 +484,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCantidadProductos;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProdId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProdNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colVehiculoId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
     }
 }

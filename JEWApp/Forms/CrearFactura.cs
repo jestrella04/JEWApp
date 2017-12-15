@@ -71,8 +71,9 @@ namespace JEWApp.Forms
                         int prodId = int.Parse(row.Cells[0].Value.ToString());
                         int vehiculoId = int.Parse(row.Cells[2].Value.ToString());
                         int empleadoId = Session.empleadoId;
-                        double cantidad = double.Parse(row.Cells[0].Value.ToString());
-                        double precio = double.Parse(row.Cells[0].Value.ToString());
+
+                        double cantidad = double.Parse(row.Cells[3].Value.ToString());
+                        double precio = double.Parse(row.Cells[4].Value.ToString());
 
                         int i = sp.InsertFacturaDetalle(insertedFacturaId, prodId, vehiculoId, empleadoId, cantidad, precio);
 
