@@ -120,6 +120,7 @@
             // cmbVehiculoModelo
             // 
             this.cmbVehiculoModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVehiculoModelo.Enabled = false;
             this.cmbVehiculoModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVehiculoModelo.FormattingEnabled = true;
             this.cmbVehiculoModelo.Location = new System.Drawing.Point(217, 108);
@@ -282,7 +283,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbCrearProducto);
             this.Controls.Add(this.label1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearVehiculo";
             this.Text = "CrearVehiculo";
