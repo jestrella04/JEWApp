@@ -95,7 +95,7 @@
             this.Column3.HeaderText = "Descripción";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
+            this.Column3.Width = 300;
             // 
             // VerRol
             // 

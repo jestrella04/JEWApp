@@ -23,17 +23,23 @@ namespace JEWApp.Forms
             fo = new FormOperations(this);
         }
 
-        private void VerProductoInventario_Load(object sender, EventArgs e)
+        private void actualizarInventarioLista()
         {
             DataTable inventarioLista = sp.SelectInventario();
             DataTable productoLista = sp.SelectProducto();
 
             fo.LlenarCombo(cmbInventarioProducto, productoLista);
+            dgvProductoInventario.Rows.Clear();
 
             foreach (DataRow row in inventarioLista.Rows)
             {
                 dgvProductoInventario.Rows.Add(row["id_producto"].ToString(), row["nombre_producto"].ToString(), row["cantidad_disponible"].ToString(), row["cantidad_minima"].ToString(), row["precio"].ToString());
             }
+        }
+
+        private void VerProductoInventario_Load(object sender, EventArgs e)
+        {
+            actualizarInventarioLista();            
         }
 
         private void btnAgregarInventario_Click(object sender, EventArgs e)
@@ -65,6 +71,7 @@ namespace JEWApp.Forms
                 if (i > 0)
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Inventario actualizado exitosamente.");
+                    actualizarInventarioLista();
                     fo.LimpiarForm();
                 }
 

@@ -165,18 +165,21 @@
             this.Column2.HeaderText = "Empleado";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Neto";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Comisión";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
             // VerReporteComisiones
             // 

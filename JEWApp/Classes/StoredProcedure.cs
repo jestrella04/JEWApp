@@ -659,7 +659,7 @@ namespace JEWApp
             return dt;
         }
 
-        public DataTable SelectReporteCumpleanos(DateTime fechaIni, DateTime fechaFin)
+        public DataTable SelectReporteCumpleanos(string fechaIni, string fechaFin)
         {
             string storedProcedureName = "sp_select_reporte_cumpleanos";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
