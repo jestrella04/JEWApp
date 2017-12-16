@@ -31,12 +31,17 @@ namespace JEWApp.Forms
             DataTable facturaDetalle = sp.SelectFacturaDetalle(facturaId);
 
             txtFacturaId.Text = facturaId.ToString();
-            txtNombreCliente.Text = facturaCabecera.Rows[0]["nombre"].ToString();
+            txtNombreCliente.Text = facturaCabecera.Rows[0]["nombre_cliente"].ToString();
             txtEstadoFactura.Text = facturaCabecera.Rows[0]["nombre_estado"].ToString();
             txtFechaCreacion.Text = facturaCabecera.Rows[0]["fecha_creacion"].ToString();
             txtFechaActualizacion.Text = facturaCabecera.Rows[0]["fecha_actualizacion"].ToString();
+            txtCantidadProductos.Text = facturaCabecera.Rows[0]["items"].ToString();
+            txtNetoPagar.Text = facturaCabecera.Rows[0]["neto"].ToString();
 
-            dgvFacturaDetalle.Rows.Add(facturaDetalle.Rows[0]["nombre_producto"], facturaDetalle.Rows[0]["id_vehiculo"], facturaDetalle.Rows[0]["id_empleado"], facturaDetalle.Rows[0]["nombre_empleado"], facturaDetalle.Rows[0]["cantidad"], facturaDetalle.Rows[0]["precio"]);
+            if (facturaDetalle.Rows.Count > 0)
+            {
+                dgvFacturaDetalle.Rows.Add(facturaDetalle.Rows[0]["nombre_producto"], facturaDetalle.Rows[0]["id_vehiculo"], facturaDetalle.Rows[0]["id_empleado"], facturaDetalle.Rows[0]["nombre_empleado"], facturaDetalle.Rows[0]["cantidad"], facturaDetalle.Rows[0]["precio"], facturaDetalle.Rows[0]["neto"]);
+            }
         }
     }
 }

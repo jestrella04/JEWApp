@@ -38,6 +38,7 @@
             this.tsSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClienteCrear = new System.Windows.Forms.ToolStripButton();
             this.btnClienteLista = new System.Windows.Forms.ToolStripButton();
+            this.btnVehiculoAgregar = new System.Windows.Forms.ToolStripButton();
             this.tsSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnProductoCrear = new System.Windows.Forms.ToolStripButton();
             this.btnProductoLista = new System.Windows.Forms.ToolStripButton();
@@ -46,6 +47,7 @@
             this.btnFacturaCrear = new System.Windows.Forms.ToolStripButton();
             this.btnFacturaLista = new System.Windows.Forms.ToolStripButton();
             this.tsSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReporteServicios = new System.Windows.Forms.ToolStripButton();
             this.btnReporteComisiones = new System.Windows.Forms.ToolStripButton();
             this.btnReporteCumpleanos = new System.Windows.Forms.ToolStripButton();
             this.tsSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -68,6 +70,7 @@
             this.tsSeparator2,
             this.btnClienteCrear,
             this.btnClienteLista,
+            this.btnVehiculoAgregar,
             this.tsSeparator3,
             this.btnProductoCrear,
             this.btnProductoLista,
@@ -76,6 +79,7 @@
             this.btnFacturaCrear,
             this.btnFacturaLista,
             this.tsSeparator5,
+            this.btnReporteServicios,
             this.btnReporteComisiones,
             this.btnReporteCumpleanos,
             this.tsSeparator6,
@@ -182,6 +186,20 @@
             this.btnClienteLista.ToolTipText = "Ver Clientes";
             this.btnClienteLista.Click += new System.EventHandler(this.btnClienteLista_Click);
             // 
+            // btnVehiculoAgregar
+            // 
+            this.btnVehiculoAgregar.AutoSize = false;
+            this.btnVehiculoAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVehiculoAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnVehiculoAgregar.Image")));
+            this.btnVehiculoAgregar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnVehiculoAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVehiculoAgregar.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.btnVehiculoAgregar.Name = "btnVehiculoAgregar";
+            this.btnVehiculoAgregar.Size = new System.Drawing.Size(52, 52);
+            this.btnVehiculoAgregar.Text = "toolStripButton1";
+            this.btnVehiculoAgregar.ToolTipText = "Agregar Vehículo";
+            this.btnVehiculoAgregar.Click += new System.EventHandler(this.btnVehiculoAgregar_Click);
+            // 
             // tsSeparator3
             // 
             this.tsSeparator3.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
@@ -269,6 +287,20 @@
             this.tsSeparator5.Margin = new System.Windows.Forms.Padding(8, 8, 16, 8);
             this.tsSeparator5.Name = "tsSeparator5";
             this.tsSeparator5.Size = new System.Drawing.Size(6, 52);
+            // 
+            // btnReporteServicios
+            // 
+            this.btnReporteServicios.AutoSize = false;
+            this.btnReporteServicios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReporteServicios.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteServicios.Image")));
+            this.btnReporteServicios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReporteServicios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReporteServicios.Margin = new System.Windows.Forms.Padding(0, 8, 8, 8);
+            this.btnReporteServicios.Name = "btnReporteServicios";
+            this.btnReporteServicios.Size = new System.Drawing.Size(52, 52);
+            this.btnReporteServicios.Text = "toolStripButton1";
+            this.btnReporteServicios.ToolTipText = "Reporte de Servicios";
+            this.btnReporteServicios.Click += new System.EventHandler(this.btnReporteServicios_Click);
             // 
             // btnReporteComisiones
             // 
@@ -383,5 +415,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusBarLoginMessage;
         private System.Windows.Forms.ToolStripButton btnReporteComisiones;
+        private System.Windows.Forms.ToolStripButton btnVehiculoAgregar;
+        private System.Windows.Forms.ToolStripButton btnReporteServicios;
     }
 }

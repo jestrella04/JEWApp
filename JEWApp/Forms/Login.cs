@@ -12,9 +12,13 @@ namespace JEWApp
 {
     public partial class Login : Form
     {
+        FormOperations fo;
+
         public Login()
         {
             InitializeComponent();
+
+            fo = new FormOperations(this);
         }
 
         private void showLoginError(string errorMsg)

@@ -643,5 +643,50 @@ namespace JEWApp
             db.desconectar();
             return result;
         }
+
+        public DataTable SelectReporteComisiones(string fechaIni, string fechaFin)
+        {
+            string storedProcedureName = "sp_select_reporte_comisiones";
+            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            da.SelectCommand.Parameters.Add("@FechaIni", SqlDbType.Date).Value = fechaIni;
+            da.SelectCommand.Parameters.Add("@FechaFin", SqlDbType.Date).Value = fechaFin;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable SelectReporteCumpleanos(string fechaIni, string fechaFin)
+        {
+            string storedProcedureName = "sp_select_reporte_cumpleanos";
+            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            da.SelectCommand.Parameters.Add("@FechaIni", SqlDbType.Date).Value = fechaIni;
+            da.SelectCommand.Parameters.Add("@FechaFin", SqlDbType.Date).Value = fechaFin;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable SelectReporteServicios(string fechaIni, string fechaFin)
+        {
+            string storedProcedureName = "sp_select_reporte_servicios";
+            SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            da.SelectCommand.Parameters.Add("@FechaIni", SqlDbType.Date).Value = fechaIni;
+            da.SelectCommand.Parameters.Add("@FechaFin", SqlDbType.Date).Value = fechaFin;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

@@ -71,8 +71,9 @@ namespace JEWApp.Forms
                         int prodId = int.Parse(row.Cells[0].Value.ToString());
                         int vehiculoId = int.Parse(row.Cells[2].Value.ToString());
                         int empleadoId = Session.empleadoId;
-                        double cantidad = double.Parse(row.Cells[0].Value.ToString());
-                        double precio = double.Parse(row.Cells[0].Value.ToString());
+
+                        double cantidad = double.Parse(row.Cells[3].Value.ToString());
+                        double precio = double.Parse(row.Cells[4].Value.ToString());
 
                         int i = sp.InsertFacturaDetalle(insertedFacturaId, prodId, vehiculoId, empleadoId, cantidad, precio);
 
@@ -85,14 +86,16 @@ namespace JEWApp.Forms
 
                 if (insertedFacturaId > 0 && !detalleError)
                 {
-                    fo.MostrarLabelMsg(lblResultadoMsg, "Cliente creado exitosamente.");
+                    fo.MostrarLabelMsg(lblResultadoMsg, "Factura creada exitosamente.");
                     fo.LimpiarForm();
+                    dgvFacturaDetalle.Rows.Clear();
                 }
 
                 else if (insertedFacturaId > 0 && detalleError)
                 {
                     fo.MostrarLabelMsg(lblResultadoMsg, "Factura creada, pero hubo errores almacenando los detalles.", error = true);
                     fo.LimpiarForm();
+                    dgvFacturaDetalle.Rows.Clear();
                 }
 
                 else
@@ -147,6 +150,9 @@ namespace JEWApp.Forms
                 {
                     dgvFacturaDetalle.Rows.Add(productoId, prodNombre, 0, cantidad, precio);
                 }
+
+                txtFacturaDetalleCantidad.Text = "";
+                txtFacturaDetallePrecio.Text = "";
             }
             
             else
@@ -159,6 +165,7 @@ namespace JEWApp.Forms
         {
             int productoId = int.Parse(cmbFacturaDetalleProducto.SelectedValue.ToString());
 
+            DataTable producto = sp.SelectProducto(productoId);
             DataTable inventario = sp.SelectInventario(productoId);
 
             if (inventario.Rows.Count > 0)
@@ -166,7 +173,7 @@ namespace JEWApp.Forms
                 txtFacturaDetallePrecio.Text = inventario.Rows[0]["precio"].ToString();
             }
 
-            if (productoId == 1)
+            if (producto.Rows[0]["id_categoria"].ToString() == "1")
             {
                 DataTable vehiculoLista = sp.SelectVehiculo();
                 DataView dv = new DataView(vehiculoLista);
@@ -188,7 +195,9 @@ namespace JEWApp.Forms
 
         private void btnFacturaDetalleAgregarVehiculo_Click(object sender, EventArgs e)
         {
-            CrearVehiculo crearVehiculoForm = new CrearVehiculo();
+            int clienteId = int.Parse(cmbCliente.SelectedValue.ToString());
+
+            CrearVehiculo crearVehiculoForm = new CrearVehiculo(clienteId);
 
             crearVehiculoForm.MinimizeBox = false;
             crearVehiculoForm.MaximizeBox = false;

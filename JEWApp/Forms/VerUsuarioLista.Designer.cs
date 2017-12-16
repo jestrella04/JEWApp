@@ -68,7 +68,7 @@
             this.Column6,
             this.Column7});
             this.dgvUsuarios.Location = new System.Drawing.Point(9, 93);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowTemplate.Height = 24;
@@ -119,6 +119,7 @@
             this.Column5.HeaderText = "Nombre";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 200;
             // 
             // Column6
             // 
@@ -126,6 +127,7 @@
             this.Column6.HeaderText = "Teléfono";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 150;
             // 
             // Column7
             // 
@@ -133,6 +135,7 @@
             this.Column7.HeaderText = "Correo";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 150;
             // 
             // VerUsuarios
             // 
@@ -142,7 +145,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VerUsuarios";
             this.Text = "VerUsuarios";
             this.Load += new System.EventHandler(this.VerUsuarios_Load);
