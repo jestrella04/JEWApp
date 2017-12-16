@@ -72,7 +72,7 @@
             this.dgvReporteServicios.Name = "dgvReporteServicios";
             this.dgvReporteServicios.ReadOnly = true;
             this.dgvReporteServicios.RowTemplate.Height = 24;
-            this.dgvReporteServicios.Size = new System.Drawing.Size(1018, 338);
+            this.dgvReporteServicios.Size = new System.Drawing.Size(1118, 338);
             this.dgvReporteServicios.TabIndex = 10;
             // 
             // label1
@@ -118,7 +118,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(1018, 79);
+            this.groupBox1.Size = new System.Drawing.Size(1118, 79);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros de Búsqueda";
@@ -225,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 564);
+            this.ClientSize = new System.Drawing.Size(1234, 564);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvReporteServicios);
             this.Controls.Add(this.label1);

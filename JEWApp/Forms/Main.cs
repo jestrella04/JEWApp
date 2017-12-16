@@ -197,7 +197,7 @@ namespace JEWApp
 
         private void btnReporteComisiones_Click(object sender, EventArgs e)
         {
-            VerReporteCumpleanos formReporteComisiones = new VerReporteCumpleanos();
+            VerReporteComisiones formReporteComisiones = new VerReporteComisiones();
 
             showChildForm(formReporteComisiones);
         }
