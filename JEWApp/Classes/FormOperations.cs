@@ -17,6 +17,55 @@ namespace JEWApp
         public FormOperations(Form theForm)
         {
             formOps = theForm;
+
+            formaAllBtn();
+        }
+
+        public void formaAllBtn()
+        {
+            foreach (Control c in formOps.Controls)
+            {
+                if (c is Button)
+                {
+                    formatBtn(((Button)c));
+                }
+
+                else if (c is GroupBox)
+                {
+                    foreach (Control gb in c.Controls)
+                    {
+                        if (gb is Button)
+                        {
+                            formatBtn(((Button)gb));
+                        }
+                    }
+                }
+            }
+        }
+
+        public void formatBtn(Button btn)
+        {
+            btn.ForeColor = Color.White;
+            btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+
+            if (!String.IsNullOrWhiteSpace(btn.Text))
+            {
+                if (btn.Text == "Crear" || btn.Text == "Actualizar" || btn.Text == "Iniciar Sesión")
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("#F50057");
+                }
+
+                else if (btn.Text == "Agregar Producto")
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("#FF4081");
+                }
+
+                else
+                {
+                    btn.BackColor = ColorTranslator.FromHtml("#F06292");
+                }
+            }
         }
 
         public void LimpiarForm()
@@ -29,7 +78,10 @@ namespace JEWApp
                 {
                     foreach (Control gb in c.Controls)
                     {
-                        if (gb is TextBox) gb.Text = "";
+                        if (gb is TextBox)
+                        {
+                            gb.Text = "";
+                        }
                     }
                 }
             }
@@ -63,12 +115,12 @@ namespace JEWApp
 
             if (error)
             {
-                label.ForeColor = Color.Red;
+                label.ForeColor = ColorTranslator.FromHtml("#F50057");
             }
 
             else
             {
-                label.ForeColor = Color.Green;
+                label.ForeColor = ColorTranslator.FromHtml("#2E7D32");
             }
 
             label.Visible = true;

@@ -194,7 +194,9 @@ namespace JEWApp.Forms
 
         private void btnFacturaDetalleAgregarVehiculo_Click(object sender, EventArgs e)
         {
-            CrearVehiculo crearVehiculoForm = new CrearVehiculo();
+            int clienteId = int.Parse(cmbCliente.SelectedValue.ToString());
+
+            CrearVehiculo crearVehiculoForm = new CrearVehiculo(clienteId);
 
             crearVehiculoForm.MinimizeBox = false;
             crearVehiculoForm.MaximizeBox = false;

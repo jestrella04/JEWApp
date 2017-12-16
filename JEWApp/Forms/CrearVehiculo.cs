@@ -14,21 +14,46 @@ namespace JEWApp.Forms
     {
         private StoredProcedure sp;
         private FormOperations fo;
+        private int clienteId = 0;
 
-        public CrearVehiculo()
+        public CrearVehiculo(int id = 0)
         {
             InitializeComponent();
 
             sp = new StoredProcedure();
             fo = new FormOperations(this);
+
+            if (id > 0) clienteId = id;
         }
 
         private void CrearVehiculo_Load(object sender, EventArgs e)
         {
-            DataTable clienteLista = sp.SelectCliente();
+            DataTable clienteLista;
+
+            if (clienteId > 0)
+            {
+                clienteLista = sp.SelectCliente(clienteId);
+            }
+
+            else
+            {
+                clienteLista = sp.SelectCliente();
+            }
+            
             DataTable vehiculoMarcaLista = sp.SelectVehiculoMarca();
 
             fo.LlenarCombo(cmbCliente, clienteLista);
+
+            if (clienteId > 0)
+            {                
+                cmbCliente.Enabled = false;
+            }
+
+            else
+            {
+                fo.LlenarCombo(cmbCliente, clienteLista);
+            }
+
             fo.LlenarCombo(cmbVehiculoMarca, vehiculoMarcaLista);
         }
 
@@ -107,6 +132,8 @@ namespace JEWApp.Forms
             var filter = dv.ToTable();
 
             fo.LlenarCombo(cmbVehiculoModelo, filter);
+
+            if (!cmbVehiculoModelo.Enabled) cmbVehiculoModelo.Enabled = true;
         }
     }
 }
