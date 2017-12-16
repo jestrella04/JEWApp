@@ -165,6 +165,7 @@ namespace JEWApp.Forms
         {
             int productoId = int.Parse(cmbFacturaDetalleProducto.SelectedValue.ToString());
 
+            DataTable producto = sp.SelectProducto(productoId);
             DataTable inventario = sp.SelectInventario(productoId);
 
             if (inventario.Rows.Count > 0)
@@ -172,7 +173,7 @@ namespace JEWApp.Forms
                 txtFacturaDetallePrecio.Text = inventario.Rows[0]["precio"].ToString();
             }
 
-            if (productoId == 1)
+            if (producto.Rows[0]["id_categoria"].ToString() == "1")
             {
                 DataTable vehiculoLista = sp.SelectVehiculo();
                 DataView dv = new DataView(vehiculoLista);

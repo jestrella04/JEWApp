@@ -34,6 +34,7 @@ namespace JEWApp.Forms
                 string sqlFecha2 = fecha2.ToString("yyyy-MM-dd");
 
                 DataTable dt = sp.SelectReporteCumpleanos(sqlFecha1, sqlFecha2);
+                dgvReporteCumpleanos.Rows.Clear();
 
                 foreach (DataRow row in dt.Rows)
                 {

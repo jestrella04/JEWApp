@@ -644,7 +644,7 @@ namespace JEWApp
             return result;
         }
 
-        public DataTable SelectReporteComisiones(DateTime fechaIni, DateTime fechaFin)
+        public DataTable SelectReporteComisiones(string fechaIni, string fechaFin)
         {
             string storedProcedureName = "sp_select_reporte_comisiones";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());
@@ -674,7 +674,7 @@ namespace JEWApp
             return dt;
         }
 
-        public DataTable SelectReporteServicios(DateTime fechaIni, DateTime fechaFin)
+        public DataTable SelectReporteServicios(string fechaIni, string fechaFin)
         {
             string storedProcedureName = "sp_select_reporte_servicios";
             SqlDataAdapter da = new SqlDataAdapter(storedProcedureName, db.getDbConnection());

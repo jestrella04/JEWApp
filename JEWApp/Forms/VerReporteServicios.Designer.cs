@@ -192,7 +192,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Vehículo ID";
+            this.Column5.HeaderText = "Vehículo";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 

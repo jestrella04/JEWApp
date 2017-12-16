@@ -30,7 +30,11 @@ namespace JEWApp
 
             if (DateTime.TryParse(fechaIni.ToString(), out DateTime fecha1) && DateTime.TryParse(fechaFin.ToString(), out DateTime fecha2))
             {
-                DataTable dt = sp.SelectReporteComisiones(fecha1, fecha2);
+                string sqlFecha1 = fecha1.ToString("yyyy-MM-dd");
+                string sqlFecha2 = fecha2.ToString("yyyy-MM-dd");
+
+                DataTable dt = sp.SelectReporteComisiones(sqlFecha1, sqlFecha2);
+                dgvReporteComisiones.Rows.Clear();
 
                 foreach (DataRow row in dt.Rows)
                 {
