@@ -138,6 +138,18 @@
     <Compile Include="Forms\VerProductoLista.Designer.cs">
       <DependentUpon>VerProductoLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VerReporteCumpleanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VerReporteCumpleanos.Designer.cs">
+      <DependentUpon>VerReporteCumpleanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VerReporteServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VerReporteServicios.Designer.cs">
+      <DependentUpon>VerReporteServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VerVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </Compile>
     <Compile Include="Forms\VerUsuarioLista.Designer.cs">
       <DependentUpon>VerUsuarioLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VerReporteComisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VerReporteComisiones.Designer.cs">
+      <DependentUpon>VerReporteComisiones.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\CrearCliente.resx">
       <DependentUpon>CrearCliente.cs</DependentUpon>
@@ -208,6 +226,12 @@
     <EmbeddedResource Include="Forms\VerProductoLista.resx">
       <DependentUpon>VerProductoLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VerReporteCumpleanos.resx">
+      <DependentUpon>VerReporteCumpleanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VerReporteServicios.resx">
+      <DependentUpon>VerReporteServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\VerVehiculo.resx">
       <DependentUpon>VerVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VerUsuarioLista.resx">
       <DependentUpon>VerUsuarioLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VerReporteComisiones.resx">
+      <DependentUpon>VerReporteComisiones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Config\Database.config">
       <SubType>Designer</SubType>
