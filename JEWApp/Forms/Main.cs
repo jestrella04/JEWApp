@@ -39,7 +39,6 @@ namespace JEWApp
             childForm.MinimizeBox = false;
             childForm.MaximizeBox = false;
             childForm.WindowState = FormWindowState.Maximized;
-            childForm.ShowIcon = false;
             childForm.Show();
         }
 
@@ -70,6 +69,7 @@ namespace JEWApp
                 var permisoFacturaVer = Session.empleadoPermisos.Select("nombre_tarea = 'ver factura'");
                 var permisoReporteComisiones = Session.empleadoPermisos.Select("nombre_tarea = 'reporte de comisiones'");
                 var permisoReporteCumpleanos = Session.empleadoPermisos.Select("nombre_tarea = 'reporte de cumpleaños'");
+                var permisoReporteServicios = Session.empleadoPermisos.Select("nombre_tarea = 'reporte de servicios'");
 
                 if (permisoUsuarioCrear == null || permisoUsuarioCrear.Length == 0) btnUsuarioCrear.Visible = false;
                 if (permisoUsuarioVer == null || permisoUsuarioVer.Length == 0) btnUsuarioLista.Visible = false;
@@ -85,13 +85,14 @@ namespace JEWApp
                 if (permisoFacturaVer == null || permisoFacturaVer.Length == 0) btnFacturaLista.Visible = false;
                 if (permisoReporteComisiones == null || permisoReporteComisiones.Length == 0) btnReporteComisiones.Visible = false;
                 if (permisoReporteCumpleanos == null || permisoReporteCumpleanos.Length == 0) btnReporteCumpleanos.Visible = false;
+                if (permisoReporteServicios == null || permisoReporteServicios.Length == 0) btnReporteServicios.Visible = false;
 
                 if (!btnUsuarioCrear.Visible && !btnUsuarioLista.Visible) tsSeparator1.Visible = false;
                 if (!btnRolCrear.Visible && !btnRolLista.Visible) tsSeparator2.Visible = false;
                 if (!btnClienteCrear.Visible && !btnClienteLista.Visible) tsSeparator3.Visible = false;
                 if (!btnProductoCrear.Visible && !btnProductoLista.Visible && !btnProductoInventario.Visible) tsSeparator4.Visible = false;
                 if (!btnFacturaCrear.Visible && !btnFacturaLista.Visible) tsSeparator5.Visible = false;
-                if (!btnReporteComisiones.Visible && !btnReporteComisiones.Visible) tsSeparator6.Visible = false;
+                if (!btnReporteComisiones.Visible && !btnReporteComisiones.Visible && !btnReporteServicios.Visible) tsSeparator6.Visible = false;
             }
         }
 
@@ -196,12 +197,23 @@ namespace JEWApp
 
         private void btnReporteComisiones_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            VerReporteCumpleanos formReporteComisiones = new VerReporteCumpleanos();
+
+            showChildForm(formReporteComisiones);
         }
 
         private void btnReporteCumpleanos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No está listo");
+            VerReporteCumpleanos formReporteCumpleanos = new VerReporteCumpleanos();
+
+            showChildForm(formReporteCumpleanos);
+        }
+
+        private void btnReporteServicios_Click(object sender, EventArgs e)
+        {
+            VerReporteServicios formReporteServicios = new VerReporteServicios();
+
+            showChildForm(formReporteServicios);
         }
     }
 }

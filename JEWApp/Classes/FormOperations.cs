@@ -51,7 +51,7 @@ namespace JEWApp
 
             if (!String.IsNullOrWhiteSpace(btn.Text))
             {
-                if (btn.Text == "Crear" || btn.Text == "Actualizar" || btn.Text == "Iniciar Sesión")
+                if (btn.Text == "Crear" || btn.Text == "Actualizar" || btn.Text == "Iniciar Sesión" || btn.Text == "Consultar")
                 {
                     btn.BackColor = ColorTranslator.FromHtml("#F50057");
                 }
